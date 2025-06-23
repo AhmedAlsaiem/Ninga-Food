@@ -29,6 +29,7 @@ class Ninga extends StatelessWidget {
               darkTheme: darkTheme(),
               themeMode: ThemeMode.system,
               onGenerateRoute: AppRouter.generateRoute,
+              //ToDo change this inital Route bath with function to handle  All Application Routing
               initialRoute: AppRoutes.onboardingView,
             ),
           ),
