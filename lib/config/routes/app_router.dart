@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/transitions/page_route_builder_method.dart';
+import 'package:ninga/features/authentication/presentation/view/login_view.dart';
 import 'package:ninga/features/onboarding/presentation/view/onboarding_view.dart';
 
 class AppRouter {
@@ -8,7 +9,13 @@ class AppRouter {
       case AppRoutes.onboardingView:
         return pageRouteBuilderMethod(
           pageBuilder:
-              (context, animation, secondaryAnimation) => const OnboardingView(),
+              (context, animation, secondaryAnimation) =>
+                  const OnboardingView(),
+        );
+      case AppRoutes.loginView:
+        return pageRouteBuilderMethod(
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const LoginView(),
         );
 
       default:
@@ -22,4 +29,5 @@ class AppRouter {
 
 abstract class AppRoutes {
   static const String onboardingView = '/';
+  static const String loginView = '/loginView';
 }
