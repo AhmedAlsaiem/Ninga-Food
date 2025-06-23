@@ -4,7 +4,10 @@ import 'package:ninga/core/utils/color_manager.dart';
 
 ThemeData darkTheme() {
   return ThemeData(
+    fontFamily: 'OpenSans',
+
     textTheme: textTheme(color: AppColors.lightPrimaryColor),
+    primaryColorDark: AppColors.lightPrimaryColor,
 
     brightness: Brightness.dark,
     primaryColor: AppColors.darkPrimaryColor,
@@ -15,6 +18,5 @@ ThemeData darkTheme() {
       foregroundColor: AppColors.darkPrimaryColor,
     ),
     textButtonTheme: TextButtonThemeData(style: ButtonStyle()),
-    
   );
 }

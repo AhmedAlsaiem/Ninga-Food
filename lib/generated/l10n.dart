@@ -59,11 +59,51 @@ class S {
     return Intl.message('Food Ninja', name: 'appName', desc: '', args: []);
   }
 
+  /// `Find your  Comfort Food here`
+  String get findyourComfortFoodhere {
+    return Intl.message(
+      'Find your  Comfort Food here',
+      name: 'findyourComfortFoodhere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here You Can find a chef or dish for every taste and color. Enjoy!`
+  String get hereYouCanfindachefordishforeverytaste {
+    return Intl.message(
+      'Here You Can find a chef or dish for every taste and color. Enjoy!',
+      name: 'hereYouCanfindachefordishforeverytaste',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Deliver Favorite Food`
   String get deliverFavoriteFood {
     return Intl.message(
       'Deliver Favorite Food',
       name: 'deliverFavoriteFood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy a fast and smooth food delivery at your doorstep`
+  String get enjoyFastAndSmoth {
+    return Intl.message(
+      'Enjoy a fast and smooth food delivery at your doorstep',
+      name: 'enjoyFastAndSmoth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food Ninja is Where Your Comfort Food Lives`
+  String get foodNinjaisWhere {
+    return Intl.message(
+      'Food Ninja is Where Your Comfort Food Lives',
+      name: 'foodNinjaisWhere',
       desc: '',
       args: [],
     );

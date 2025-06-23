@@ -54,6 +54,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailMeAboutSpecialPricing": MessageLookupByLibrary.simpleMessage(
       "Email Me About Special Pricing",
     ),
+    "enjoyFastAndSmoth": MessageLookupByLibrary.simpleMessage(
+      "Enjoy a fast and smooth food delivery at your doorstep",
+    ),
     "enjoyYourMeal": MessageLookupByLibrary.simpleMessage("Enjoy Your Meal"),
     "enter4DigitCode": MessageLookupByLibrary.simpleMessage(
       "Enter 4-digit Verification code",
@@ -63,13 +66,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "fillInYourBio": MessageLookupByLibrary.simpleMessage(
       "Fill in your bio to get started",
     ),
+    "findyourComfortFoodhere": MessageLookupByLibrary.simpleMessage(
+      "Find your  Comfort Food here",
+    ),
     "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
+    "foodNinjaisWhere": MessageLookupByLibrary.simpleMessage(
+      "Food Ninja is Where Your Comfort Food Lives",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password?"),
     "forgotYourPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot Your Password?",
     ),
     "fromGallery": MessageLookupByLibrary.simpleMessage("From Gallery"),
     "google": MessageLookupByLibrary.simpleMessage("Google"),
+    "hereYouCanfindachefordishforeverytaste":
+        MessageLookupByLibrary.simpleMessage(
+          "Here You Can find a chef or dish for every taste and color. Enjoy!",
+        ),
     "keepMeSignedIn": MessageLookupByLibrary.simpleMessage("Keep Me Signed In"),
     "kmRating": MessageLookupByLibrary.simpleMessage("19 Km 4,8 Rating"),
     "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),

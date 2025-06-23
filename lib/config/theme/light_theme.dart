@@ -4,8 +4,11 @@ import 'package:ninga/core/utils/color_manager.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
+    fontFamily: 'OpenSans',
+
     textTheme: textTheme(color: AppColors.balck),
     brightness: Brightness.light,
+    primaryColorDark: AppColors.darkPrimaryColor,
     primaryColor: AppColors.lightPrimaryColor,
     scaffoldBackgroundColor: AppColors.lightPrimaryColor,
     appBarTheme: AppBarTheme(
