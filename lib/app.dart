@@ -14,7 +14,7 @@ class Ninga extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DevicePreview(
-      enabled: true,
+      enabled: false,
       builder:
           (context) => ScreenUtilInit(
             designSize: const Size(375, 812),
