@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ninga/core/functions/custom_localization_delgate.dart';
 import 'package:ninga/config/theme/dark_theme.dart';
 import 'package:ninga/config/theme/light_theme.dart';
-import 'package:ninga/core/routes/app_router.dart';
 import 'package:ninga/core/utils/styles_manager.dart';
 
+import 'config/routes/app_router.dart';
 import 'generated/l10n.dart';
 
 class Ninga extends StatelessWidget {

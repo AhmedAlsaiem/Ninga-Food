@@ -23,4 +23,3 @@ class AppRouter {
 abstract class AppRoutes {
   static const String onboardingView = '/';
 }
-//ahmed
