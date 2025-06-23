@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ninga/app.dart';
 import 'package:ninga/core/functions/transitions/page_route_builder_method.dart';
+import 'package:ninga/features/onboarding/presentation/view/onboarding_view.dart';
 
 class AppRouter {
   static Route? generateRoute(RouteSettings settings) {
@@ -8,7 +8,7 @@ class AppRouter {
       case AppRoutes.onboardingView:
         return pageRouteBuilderMethod(
           pageBuilder:
-              (context, animation, secondaryAnimation) => const Ninga(),
+              (context, animation, secondaryAnimation) => const OnboardingView(),
         );
 
       default:
