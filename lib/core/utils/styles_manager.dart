@@ -131,5 +131,8 @@ abstract class AppTextStyles {
   static TextStyle textStyleBold = TextStyle(
     fontSize: FontSize.s32,
     fontWeight: AppFontWieght.bold,
+  );static TextStyle textStyleBold40= TextStyle(
+    fontSize: FontSize.s40,
+    fontWeight: AppFontWieght.bold,
   );
 }

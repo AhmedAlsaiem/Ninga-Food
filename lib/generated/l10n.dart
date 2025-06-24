@@ -54,9 +54,9 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Food Ninja`
+  /// `FoodNinja`
   String get appName {
-    return Intl.message('Food Ninja', name: 'appName', desc: '', args: []);
+    return Intl.message('FoodNinja', name: 'appName', desc: '', args: []);
   }
 
   /// `Find your  Comfort Food here`

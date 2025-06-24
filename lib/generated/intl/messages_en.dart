@@ -29,7 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "already have an account?",
     ),
-    "appName": MessageLookupByLibrary.simpleMessage("Food Ninja"),
+    "appName": MessageLookupByLibrary.simpleMessage("FoodNinja"),
     "buyAgain": MessageLookupByLibrary.simpleMessage("Buy Again"),
     "callDuration": MessageLookupByLibrary.simpleMessage("15.23 Min"),
     "chat": MessageLookupByLibrary.simpleMessage("Chat"),

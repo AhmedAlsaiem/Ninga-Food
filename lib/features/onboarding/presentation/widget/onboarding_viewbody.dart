@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ninga/config/routes/app_router.dart';
+import 'package:ninga/core/functions/navigation/navigation.dart';
 import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/assets_manager.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
-import 'package:ninga/core/utils/color_manager.dart';
+import 'package:ninga/core/utils/app_color.dart';
 import 'package:ninga/core/utils/styles_manager.dart';
 import 'package:ninga/generated/l10n.dart';
 
@@ -27,9 +29,22 @@ class OnboardingViewbody extends StatelessWidget {
       ),
       skipTextButton: Text(
         'Skip',
-        style: Theme.of(context).textTheme.titleSmall,
+        style: AppTextStyles.textStyleLight14.copyWith(
+          color: AppColors.mainColorEnd,
+        ),
       ),
-      trailing: Text('Login', style: Theme.of(context).textTheme.titleSmall),
+      trailingFunction: () {
+        AppNavigation.pushWithReplacement(
+          context: context,
+          route: AppRoutes.loginView,
+        );
+      },
+      trailing: Text(
+        'Login',
+        style: AppTextStyles.textStyleRegular12.copyWith(
+          color: AppColors.mainColorEnd,
+        ),
+      ),
       centerBackground: true,
       background: [
         SvgPicture.asset(AssetsImage.onboarding1),

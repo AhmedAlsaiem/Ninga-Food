@@ -31,5 +31,7 @@ abstract class FontSize {
   static double s32 = 32.0.sp;
   static double s34 = 34.0.sp;
   static double s36 = 36.0.sp;
+  static double s40 = 40.0.sp;
+
   static double s49 = 49.0.sp;
 }

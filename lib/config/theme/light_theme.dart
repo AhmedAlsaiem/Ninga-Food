@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/text_theme.dart';
-import 'package:ninga/core/utils/color_manager.dart';
+import 'package:ninga/core/utils/app_color.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
