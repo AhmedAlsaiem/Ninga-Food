@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Invalidemailformat": MessageLookupByLibrary.simpleMessage(
+      "Invalid email format",
+    ),
+    "SignUp": MessageLookupByLibrary.simpleMessage("SignUp"),
     "accountProfileSecurityNote": MessageLookupByLibrary.simpleMessage(
       "This data will be displayed in your account profile for security",
     ),
@@ -135,6 +139,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your order has been taken by the driver",
     ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordMustBeAtLeast6Characters": MessageLookupByLibrary.simpleMessage(
+      "Password Must Be At Least 6 Characters",
+    ),
     "paymentCardMasked": MessageLookupByLibrary.simpleMessage(
       "2121 6352 8465 ****",
     ),
@@ -151,6 +158,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "payoneer": MessageLookupByLibrary.simpleMessage("Payoneer"),
     "paypal": MessageLookupByLibrary.simpleMessage("PayPal"),
     "placeMyOrder": MessageLookupByLibrary.simpleMessage("Place My Order"),
+    "pleaseEnterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
+      "Please enter your email address",
+    ),
+    "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "Please enter your password",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("Popular Menu"),
     "process": MessageLookupByLibrary.simpleMessage("Process"),

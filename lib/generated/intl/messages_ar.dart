@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Invalidemailformat": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني غير صحيح",
+    ),
+    "SignUp": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "accountProfileSecurityNote": MessageLookupByLibrary.simpleMessage(
       "ستظهر هذه البيانات في ملفك الشخصي لأغراض الأمان",
     ),
@@ -124,6 +128,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم قبول طلبك من قبل السائق",
     ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordMustBeAtLeast6Characters": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور يجب أن تكون على الأقل 6 أحرف",
+    ),
     "paymentCardMasked": MessageLookupByLibrary.simpleMessage(
       "2121 6352 8465 ****",
     ),
@@ -140,6 +147,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "payoneer": MessageLookupByLibrary.simpleMessage("بايونير"),
     "paypal": MessageLookupByLibrary.simpleMessage("باي بال"),
     "placeMyOrder": MessageLookupByLibrary.simpleMessage("تقديم طلبي"),
+    "pleaseEnterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
+      " أدخل البريد الإلكتروني",
+    ),
+    "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "ادخل كلمه المرور",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("شائع"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("قائمة شائعة"),
     "process": MessageLookupByLibrary.simpleMessage("معالجة"),

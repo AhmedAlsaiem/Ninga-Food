@@ -24,7 +24,7 @@ class Ninga extends StatelessWidget {
             builder: (context, child) {
               return AppWrapper(
                 child: MaterialApp(
-                  locale: const Locale('en'),
+                  locale: const Locale('ar'),
                   localizationsDelegates: customLocalizationDelegates,
                   supportedLocales: S.delegate.supportedLocales,
                   debugShowCheckedModeBanner: false,
@@ -32,7 +32,7 @@ class Ninga extends StatelessWidget {
                   darkTheme: darkTheme(),
                   themeMode: ThemeMode.system,
                   onGenerateRoute: AppRouter.generateRoute,
-                  initialRoute: AppRoutes.onboardingView,
+                  initialRoute: AppRoutes.loginView,
                 ),
               );
             },

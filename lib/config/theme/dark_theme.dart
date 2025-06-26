@@ -4,11 +4,12 @@ import 'package:ninga/core/utils/app_color.dart';
 
 ThemeData darkTheme() {
   return ThemeData(
+  inputDecorationTheme: InputDecorationTheme(
+    
+  ),
     fontFamily: 'OpenSans',
-
     textTheme: textTheme(color: AppColors.lightPrimaryColor),
     primaryColorDark: AppColors.lightPrimaryColor,
-
     brightness: Brightness.dark,
     primaryColor: AppColors.darkPrimaryColor,
     scaffoldBackgroundColor: AppColors.darkPrimaryColor,
@@ -18,5 +19,6 @@ ThemeData darkTheme() {
       foregroundColor: AppColors.darkPrimaryColor,
     ),
     textButtonTheme: TextButtonThemeData(style: ButtonStyle()),
+    
   );
 }

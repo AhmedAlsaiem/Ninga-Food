@@ -9,9 +9,7 @@ import 'package:ninga/core/utils/styles_manager.dart';
 import 'package:ninga/generated/l10n.dart';
 
 class CustomLogoAuthSection extends StatelessWidget {
-  const CustomLogoAuthSection({
-    super.key,
-  });
+  const CustomLogoAuthSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class CustomLogoAuthSection extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: [
         SizedBox(
-          height: context.screenHeight * 0.4,
+          height: context.screenHeight * 0.38,
           width: double.infinity,
           child: SvgPicture.asset(
             AssetsImage.authintactionBackground,
@@ -44,7 +42,9 @@ class CustomLogoAuthSection extends StatelessWidget {
               },
               child: Text(
                 S.of(context).appName,
-                style: AppTextStyles.textStyleBold40,
+                style: AppTextStyles.textStyleBold40.copyWith(
+                  color: AppColors.lightPrimaryColor,
+                ),
               ),
             ),
             Text(

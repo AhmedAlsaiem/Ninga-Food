@@ -66,7 +66,7 @@ class OnboardingViewbody extends StatelessWidget {
                   style: AppTextStyles.textStyleBold22,
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 10),
 
               SizedBox(
                 width: context.screenWidth * 0.7,
@@ -92,7 +92,7 @@ class OnboardingViewbody extends StatelessWidget {
                   style: AppTextStyles.textStyleBold22,
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 10),
 
               SizedBox(
                 width: context.screenWidth * 0.75,

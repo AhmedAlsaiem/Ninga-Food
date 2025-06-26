@@ -124,6 +124,11 @@ class S {
     return Intl.message('Email', name: 'email', desc: '', args: []);
   }
 
+  /// `SignUp`
+  String get SignUp {
+    return Intl.message('SignUp', name: 'SignUp', desc: '', args: []);
+  }
+
   /// `Password`
   String get password {
     return Intl.message('Password', name: 'password', desc: '', args: []);
@@ -139,6 +144,26 @@ class S {
     );
   }
 
+  /// `Please enter your password`
+  String get pleaseEnterYourPassword {
+    return Intl.message(
+      'Please enter your password',
+      name: 'pleaseEnterYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password Must Be At Least 6 Characters`
+  String get passwordMustBeAtLeast6Characters {
+    return Intl.message(
+      'Password Must Be At Least 6 Characters',
+      name: 'passwordMustBeAtLeast6Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Facebook`
   String get facebook {
     return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
@@ -147,6 +172,26 @@ class S {
   /// `Google`
   String get google {
     return Intl.message('Google', name: 'google', desc: '', args: []);
+  }
+
+  /// `Please enter your email address`
+  String get pleaseEnterYourEmailAddress {
+    return Intl.message(
+      'Please enter your email address',
+      name: 'pleaseEnterYourEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email format`
+  String get Invalidemailformat {
+    return Intl.message(
+      'Invalid email format',
+      name: 'Invalidemailformat',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Forgot Your Password?`
