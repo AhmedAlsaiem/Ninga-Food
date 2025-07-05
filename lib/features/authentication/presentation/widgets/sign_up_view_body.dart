@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/auth_functions/handle_login_background_color_gradient.dart';
 import 'package:ninga/features/authentication/presentation/widgets/custom_logo_auth.dart';
-import 'custom_login_view_login_section.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+import 'custom_signup_view_signup_section.dart';
+
+class SignUpViewBody extends StatelessWidget {
+  const SignUpViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class LoginViewBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               CustomLogoAuthSection(),
-              CustomLoginViewLoginSection(brightness: brightness),
+              CustomSignupViewSignupSection(brightness: brightness),
             ],
           ),
         ),

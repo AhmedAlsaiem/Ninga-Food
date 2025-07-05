@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "InvalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "InValid Phone Number",
+    ),
     "Invalidemailformat": MessageLookupByLibrary.simpleMessage(
       "Invalid email format",
     ),
@@ -157,12 +160,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
     "payoneer": MessageLookupByLibrary.simpleMessage("Payoneer"),
     "paypal": MessageLookupByLibrary.simpleMessage("PayPal"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "placeMyOrder": MessageLookupByLibrary.simpleMessage("Place My Order"),
     "pleaseEnterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
       "Please enter your email address",
     ),
     "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
+    ),
+    "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter your Phone Number",
     ),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("Popular Menu"),

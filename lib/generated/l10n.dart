@@ -134,6 +134,16 @@ class S {
     return Intl.message('Password', name: 'password', desc: '', args: []);
   }
 
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Or Continue With`
   String get orContinueWith {
     return Intl.message(
@@ -149,6 +159,26 @@ class S {
     return Intl.message(
       'Please enter your password',
       name: 'pleaseEnterYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your Phone Number`
+  String get pleaseEnterYourPhoneNumber {
+    return Intl.message(
+      'Please enter your Phone Number',
+      name: 'pleaseEnterYourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `InValid Phone Number`
+  String get InvalidPhoneNumber {
+    return Intl.message(
+      'InValid Phone Number',
+      name: 'InvalidPhoneNumber',
       desc: '',
       args: [],
     );

@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "InvalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف غير صحيح",
+    ),
     "Invalidemailformat": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني غير صحيح",
     ),
@@ -146,12 +149,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "paymentMethod": MessageLookupByLibrary.simpleMessage("طريقة الدفع"),
     "payoneer": MessageLookupByLibrary.simpleMessage("بايونير"),
     "paypal": MessageLookupByLibrary.simpleMessage("باي بال"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "placeMyOrder": MessageLookupByLibrary.simpleMessage("تقديم طلبي"),
     "pleaseEnterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
       " أدخل البريد الإلكتروني",
     ),
     "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
       "ادخل كلمه المرور",
+    ),
+    "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "ادخل كلمه رقم الهاتف",
     ),
     "popular": MessageLookupByLibrary.simpleMessage("شائع"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("قائمة شائعة"),

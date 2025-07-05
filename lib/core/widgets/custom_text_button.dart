@@ -15,21 +15,22 @@ class CustomAppTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: (AppSize.s48 * 3).w,
-      height: AppSize.s56,
-
+      constraints: BoxConstraints(
+        minWidth: (AppSize.s50 * 3).w,
+        minHeight: AppSize.s56 * 1.2,
+      ),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [AppColors.mainColorStart, AppColors.mainColorEnd],
         ),
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(AppSize.s16),
       ),
       child: TextButton(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.lightPrimaryColor,
         ),
         onPressed: onPressed,
-        child: Text(title, style: AppTextStyles.textStyleBold18),
+        child: Text(title, style: AppTextStyles.textStyleBold16),
       ),
     );
   }

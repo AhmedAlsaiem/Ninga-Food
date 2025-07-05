@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/config/routes/app_router.dart';
 import 'package:ninga/core/functions/navigation/navigation.dart';
+import 'package:ninga/core/functions/text_from_field_methods/phone_number_validataion.dart';
 import 'package:ninga/core/functions/text_from_field_methods/validation_password_method.dart';
 import 'package:ninga/core/functions/text_from_field_methods/validiation_email_method.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/assets_manager.dart';
 import 'package:ninga/core/widgets/custom_text_button.dart';
 import 'package:ninga/features/authentication/presentation/widgets/custom_authentication_text_form_field.dart';
-import 'package:ninga/features/authentication/presentation/widgets/custom_signup_option_section.dart';
+import 'package:ninga/features/authentication/presentation/widgets/security_options_for_keyp_my_sign_in.dart';
 import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
-class CustomLoginViewLoginSection extends StatelessWidget {
-  CustomLoginViewLoginSection({super.key, required this.brightness});
+class CustomSignupViewSignupSection extends StatelessWidget {
+  CustomSignupViewSignupSection({super.key, required this.brightness});
 
   final Brightness brightness;
   final GlobalKey<FormState> loginkey = GlobalKey();
@@ -28,6 +29,14 @@ class CustomLoginViewLoginSection extends StatelessWidget {
           children: [
             SizedBox(height: AppSize.s20),
             CustomAuthenticationTextFromField(
+              textInputType: TextInputType.number,
+              validator: validationPhoneNumberMethod(context: context),
+              hintText: S.of(context).phoneNumber,
+              icon: AssetsIcon.userName1,
+              onChanged: (value) {},
+            ),
+            SizedBox(height: AppSize.s20),
+            CustomAuthenticationTextFromField(
               validator: validationEmailMethod(context: context),
               hintText: S.of(context).email,
               icon: AssetsIcon.emailIcon,
@@ -40,26 +49,31 @@ class CustomLoginViewLoginSection extends StatelessWidget {
               icon: AssetsIcon.password,
               onChanged: (value) {},
             ),
-            CustomSignUpOptionsSection(brightness: brightness),
-            CustomTextButton(
-              title: S.of(context).forgotPassword,
-              onPressed: () {
-                AppNavigation.pushName(
-                  context: context,
-                  route: AppRoutes.forgetPassword,
-                );
-              },
+            SizedBox(height: AppSize.s12),
+
+            SecurityOptionsForKeypMySignIn(title: S.of(context).keepMeSignedIn),
+            SecurityOptionsForKeypMySignIn(
+              title: S.of(context).emailMeAboutSpecialPricing,
             ),
-            SizedBox(height: AppSize.s8),
+            SizedBox(width: AppSize.s20),
+
             CustomAppTextButton(
               onPressed: () {
                 if (loginkey.currentState!.validate()) {}
               },
-              title: S.of(context).login,
+              title: S.of(context).createAccount,
             ),
-
+            CustomTextButton(
+              title: S.of(context).loginToYourAccount,
+              onPressed: () {
+                AppNavigation.pushName(
+                  context: context,
+                  route: AppRoutes.loginView,
+                );
+              },
+            ),
             SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-            SizedBox(height: AppSize.s80),
+            SizedBox(height: 30),
           ],
         ),
       ),
