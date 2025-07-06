@@ -1,4 +1,3 @@
-
 import 'package:screenutil_module/util/config/global_imports.dart';
 
 abstract class AppSize {
@@ -52,12 +51,12 @@ abstract class AppSize {
   static const double s130 = 130.0;
 
   static const double s160 = 160.0;
+  static const double s180 = 180.0;
   static const double s200 = 200.0;
   static const double s300 = 300.0;
   static const double s480 = 480.0;
   static const double infinty = double.infinity;
 }
-
 
 abstract class AppHeight {
   static double h2 = 2.0.h;
@@ -92,12 +91,10 @@ abstract class AppHeight {
   static double h122 = 122.0.h;
   static double h190 = 190.0.h;
 
-
   static double h400 = 400.0.h;
   static double h300 = 300.0.h;
   static double h200 = 200.0.h;
   static double h250 = 250.0.h;
-
 }
 
 abstract class Appwidth {
