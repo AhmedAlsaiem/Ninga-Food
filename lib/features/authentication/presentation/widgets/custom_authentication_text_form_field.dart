@@ -35,6 +35,7 @@ class _CustomAuthenticationTextFromFieldState
   Widget build(BuildContext context) {
     var brightness = MediaQuery.of(context).platformBrightness;
     return TextFormField(
+      cursorColor: AppColors.mainColorStart,
       keyboardType: widget.textInputType,
       onChanged: widget.onChanged,
       obscureText:

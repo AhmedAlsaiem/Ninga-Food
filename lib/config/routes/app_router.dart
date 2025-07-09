@@ -3,6 +3,7 @@ import 'package:ninga/core/functions/transitions/page_route_builder_method.dart'
 import 'package:ninga/features/authentication/presentation/view/forget_password_view.dart';
 import 'package:ninga/features/authentication/presentation/view/login_view.dart';
 import 'package:ninga/features/authentication/presentation/view/sign_up_view.dart';
+import 'package:ninga/features/authentication/presentation/view/foget_password_verification.dart';
 import 'package:ninga/features/onboarding/presentation/view/onboarding_view.dart';
 
 class AppRouter {
@@ -36,6 +37,12 @@ class AppRouter {
               (context, animation, secondaryAnimation) =>
                   const ForgetPasswordView(),
         );
+      case AppRoutes.forgetPasswordVerification:
+        return pageRouteBuilderMethod(
+          pageBuilder:
+              (context, animation, secondaryAnimation) =>
+                  const ForgetPasswordVerification(),
+        );
 
       default:
         return pageRouteBuilderMethod(
@@ -52,4 +59,5 @@ abstract class AppRoutes {
   static const String forgetPassword = '/forgetPassword';
   static const String signUpView = '/signUpView';
   static const String home = '/home';
+  static const String forgetPasswordVerification = '/forgetPasswordVerification';
 }

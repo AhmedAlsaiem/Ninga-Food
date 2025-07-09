@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ninga/config/routes/app_router.dart';
+import 'package:ninga/core/functions/navigation/navigation.dart';
 import 'package:ninga/core/functions/text_from_field_methods/validiation_email_method.dart';
 import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/utils/app_size.dart';
@@ -43,30 +45,43 @@ class _ForgetPasswordAuthSectionState extends State<ForgetPasswordAuthSection>
     });
   }
 
+  GlobalKey<FormState> globakForgetPasswordFrom = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: AppSize.s16),
-      child: Column(
-        children: [
-          SizedBox(height: AppSize.s50),
-          CustomAuthenticationTextFromField(
-            validator: validationEmailMethod(context: context),
-            icon: AssetsIcon.emailIcon,
-            hintText: S.of(context).email,
-            onChanged: (value) {},
-          ),
+    return Form(
+      key: globakForgetPasswordFrom,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: AppSize.s16),
+        child: Column(
+          children: [
+            SizedBox(height: AppSize.s50),
+            CustomAuthenticationTextFromField(
+              validator: validationEmailMethod(context: context),
+              icon: AssetsIcon.emailIcon,
+              hintText: S.of(context).email,
+              onChanged: (value) {},
+            ),
 
-          /// ✅ AnimatedContainer لمسافة سلسة عند الفتح والغلق
-          SizedBox(
-            height: isKeyboardOpen ? AppSize.s30.h : context.screenHeight * 0.4,
-          ),
+            SizedBox(
+              height:
+                  isKeyboardOpen ? AppSize.s30.h : context.screenHeight * 0.4,
+            ),
 
-          CustomAppTextButton(title: S.of(context).submit, onPressed: () {}),
-          SizedBox(height: AppSize.s8),
-          SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-          SizedBox(height: AppSize.s30.h),
-        ],
+            CustomAppTextButton(
+              title: S.of(context).submit,
+              onPressed: () {
+                if (globakForgetPasswordFrom.currentState!.validate()) {}
+                AppNavigation.pushName(
+                  context: context,
+                  route: AppRoutes.forgetPasswordVerification,
+                );
+              },
+            ),
+            SizedBox(height: AppSize.s8),
+            SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
+            SizedBox(height: AppSize.s30.h),
+          ],
+        ),
       ),
     );
   }

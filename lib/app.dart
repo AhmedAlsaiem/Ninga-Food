@@ -24,7 +24,7 @@ class Ninga extends StatelessWidget {
             builder: (context, child) {
               return AppWrapper(
                 child: MaterialApp(
-                  locale: const Locale('ar'),
+                  locale: const Locale('en'),
                   localizationsDelegates: customLocalizationDelegates,
                   supportedLocales: S.delegate.supportedLocales,
                   debugShowCheckedModeBanner: false,
