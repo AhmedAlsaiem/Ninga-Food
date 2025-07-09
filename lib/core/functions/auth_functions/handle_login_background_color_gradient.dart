@@ -7,9 +7,7 @@ List<Color> handleAuthBackgroundColorGradient(
 ) {
   return [
     Theme.of(context).primaryColor,
-    brightness == Brightness.light
-        ? AppColors.lightAuthBackgroundColor
-        : AppColors.darkPrimaryColor,
+    brightness == Brightness.light ? Colors.white : AppColors.darkPrimaryColor,
     brightness == Brightness.light
         ? AppColors.lightAuthBackgroundColor
         : AppColors.darkPrimaryColor,

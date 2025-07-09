@@ -25,7 +25,7 @@ class SignUpViewBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               CustomLogoAuthSection(),
-              CustomSignupViewSignupSection(brightness: brightness),
+              CustomSignupViewSignupSection(),
             ],
           ),
         ),

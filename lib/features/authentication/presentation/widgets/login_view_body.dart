@@ -19,6 +19,7 @@ class LoginViewBody extends StatelessWidget {
           ),
         ),
         child: SingleChildScrollView(
+          
           reverse: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,

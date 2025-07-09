@@ -18,7 +18,7 @@ class CustomSignUpOptionsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: AppSize.s8),
+        SizedBox(height: AppSize.s2),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +55,6 @@ class CustomSignUpOptionsSection extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: AppSize.s10),
       ],
     );
   }

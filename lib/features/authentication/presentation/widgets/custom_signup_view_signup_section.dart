@@ -13,9 +13,8 @@ import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
 class CustomSignupViewSignupSection extends StatelessWidget {
-  CustomSignupViewSignupSection({super.key, required this.brightness});
+  CustomSignupViewSignupSection({super.key});
 
-  final Brightness brightness;
   final GlobalKey<FormState> loginkey = GlobalKey();
 
   @override
@@ -27,7 +26,7 @@ class CustomSignupViewSignupSection extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            SizedBox(height: AppSize.s20),
+            SizedBox(height: AppSize.s12),
             CustomAuthenticationTextFromField(
               textInputType: TextInputType.number,
               validator: validationPhoneNumberMethod(context: context),
@@ -35,7 +34,7 @@ class CustomSignupViewSignupSection extends StatelessWidget {
               icon: AssetsIcon.userName1,
               onChanged: (value) {},
             ),
-            SizedBox(height: AppSize.s20),
+            SizedBox(height: AppSize.s12),
             CustomAuthenticationTextFromField(
               validator: validationEmailMethod(context: context),
               hintText: S.of(context).email,
@@ -49,8 +48,6 @@ class CustomSignupViewSignupSection extends StatelessWidget {
               icon: AssetsIcon.password,
               onChanged: (value) {},
             ),
-            SizedBox(height: AppSize.s12),
-
             SecurityOptionsForKeypMySignIn(title: S.of(context).keepMeSignedIn),
             SecurityOptionsForKeypMySignIn(
               title: S.of(context).emailMeAboutSpecialPricing,
@@ -73,7 +70,6 @@ class CustomSignupViewSignupSection extends StatelessWidget {
               },
             ),
             SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-            SizedBox(height: 30),
           ],
         ),
       ),
