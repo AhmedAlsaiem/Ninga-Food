@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "هل لديك حساب بالفعل؟",
     ),
     "appName": MessageLookupByLibrary.simpleMessage("نينجا الطعام"),
+    "back": MessageLookupByLibrary.simpleMessage("رجوع"),
     "buyAgain": MessageLookupByLibrary.simpleMessage("شراء مرة أخرى"),
     "callDuration": MessageLookupByLibrary.simpleMessage("15.23 دقيقة"),
     "chat": MessageLookupByLibrary.simpleMessage("الدردشة"),
@@ -48,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirmPassword": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور",
     ),
+    "congrats": MessageLookupByLibrary.simpleMessage("اهلاا"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "deliverFavoriteFood": MessageLookupByLibrary.simpleMessage(
       "توصيل الطعام المفضل",
@@ -133,6 +135,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordMustBeAtLeast6Characters": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور يجب أن تكون على الأقل 6 أحرف",
+    ),
+    "passwordresetsuccesful": MessageLookupByLibrary.simpleMessage(
+      "تم تغيير كلمة المرور",
     ),
     "paymentCardMasked": MessageLookupByLibrary.simpleMessage(
       "2121 6352 8465 ****",
@@ -221,5 +226,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "wijieBarAndResto": MessageLookupByLibrary.simpleMessage("مطعم وبار ويجي"),
     "youHave3Voucher": MessageLookupByLibrary.simpleMessage("لديك 3 قسائم"),
     "yourLocation": MessageLookupByLibrary.simpleMessage("موقعك"),
+    "yourProfileIsReadyToUse": MessageLookupByLibrary.simpleMessage(
+      "حسابك جاهز الآن",
+    ),
   };
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ninga/config/routes/app_router.dart';
+import 'package:ninga/core/functions/navigation/navigation.dart';
 import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/widgets/custom_text_button.dart';
 import 'package:ninga/features/authentication/presentation/widgets/otp_verification_text_form.dart';
@@ -62,6 +64,11 @@ class OtpForgetPasswordDigitsSectionState
           onPressed: () {
             String otpCode = getOtpCode();
             print('OTP entered: $otpCode');
+            AppNavigation.pushName(
+              
+              context: context,
+              route: AppRoutes.restPasswordView,
+            );
           },
         ),
       ],

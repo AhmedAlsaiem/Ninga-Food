@@ -67,7 +67,10 @@ class CustomAuthTitleAndAppBar extends StatelessWidget {
                 ),
 
                 SizedBox(height: AppSize.s20),
-                Text(title, style: AppTextStyles.textStyleBold25),
+                SizedBox(
+                  width: context.screenWidth * 0.8,
+                  child: Text(title, style: AppTextStyles.textStyleBold25),
+                ),
                 SizedBox(height: AppSize.s30),
                 SizedBox(
                   width: context.screenWidth * 0.8,

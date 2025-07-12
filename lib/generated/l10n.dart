@@ -109,6 +109,31 @@ class S {
     );
   }
 
+  /// `Password reset succesful`
+  String get passwordresetsuccesful {
+    return Intl.message(
+      'Password reset succesful',
+      name: 'passwordresetsuccesful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Profile Is Ready To Use`
+  String get yourProfileIsReadyToUse {
+    return Intl.message(
+      'Your Profile Is Ready To Use',
+      name: 'yourProfileIsReadyToUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message('Back', name: 'back', desc: '', args: []);
+  }
+
   /// `Login To Your Account`
   String get loginToYourAccount {
     return Intl.message(
@@ -197,6 +222,11 @@ class S {
   /// `Facebook`
   String get facebook {
     return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `Congrats!`
+  String get congrats {
+    return Intl.message('Congrats!', name: 'congrats', desc: '', args: []);
   }
 
   /// `Google`

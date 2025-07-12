@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ninga/config/routes/app_router.dart';
 import 'package:ninga/core/functions/navigation/navigation.dart';
-import 'package:ninga/core/functions/text_from_field_methods/validiation_email_method.dart';
+import 'package:ninga/core/functions/text_from_field_methods/validation_password_method.dart';
 import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/assets_manager.dart';
@@ -13,15 +13,16 @@ import 'package:ninga/generated/l10n.dart';
 
 import 'custom_authentication_text_form_field.dart';
 
-class ForgetPasswordAuthSection extends StatefulWidget {
-  const ForgetPasswordAuthSection({super.key});
+class ResetPasswrodPasswordAndNewPasswordSection extends StatefulWidget {
+  const ResetPasswrodPasswordAndNewPasswordSection({super.key});
 
   @override
-  State<ForgetPasswordAuthSection> createState() =>
-      _ForgetPasswordAuthSectionState();
+  State<ResetPasswrodPasswordAndNewPasswordSection> createState() =>
+      _ResetPasswrodPasswordAndNewPasswordSectionState();
 }
 
-class _ForgetPasswordAuthSectionState extends State<ForgetPasswordAuthSection>
+class _ResetPasswrodPasswordAndNewPasswordSectionState
+    extends State<ResetPasswrodPasswordAndNewPasswordSection>
     with WidgetsBindingObserver {
   bool isKeyboardOpen = false;
 
@@ -56,24 +57,32 @@ class _ForgetPasswordAuthSectionState extends State<ForgetPasswordAuthSection>
           children: [
             SizedBox(height: AppSize.s50),
             CustomAuthenticationTextFromField(
-              validator: validationEmailMethod(context: context),
-              icon: AssetsIcon.emailIcon,
-              hintText: S.of(context).email,
+              validator: validationPasswordMethod(context: context),
+              icon: AssetsIcon.password,
+              hintText: S.of(context).password,
+              onChanged: (value) {},
+            ),
+            SizedBox(height: AppSize.s16),
+            CustomAuthenticationTextFromField(
+              validator: validationPasswordMethod(context: context),
+              icon: AssetsIcon.password,
+              hintText: S.of(context).newPassword,
               onChanged: (value) {},
             ),
 
             SizedBox(
               height:
-                  isKeyboardOpen ? AppSize.s30.h : context.screenHeight * 0.4,
+                  isKeyboardOpen ? AppSize.s30.h : context.screenHeight * 0.3,
             ),
 
             CustomAppTextButton(
-              title: S.of(context).submit,
+              title: S.of(context).next,
               onPressed: () {
                 if (globakForgetPasswordFrom.currentState!.validate()) {}
                 AppNavigation.pushName(
                   context: context,
-                  route: AppRoutes.forgetPasswordVerification,
+                  argument: S.of(context).passwordresetsuccesful,
+                  route: AppRoutes.sucessRestPassowrdView,
                 );
               },
             ),

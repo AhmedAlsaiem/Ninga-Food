@@ -39,14 +39,16 @@ class _CustomAuthenticationTextFromFieldState
       keyboardType: widget.textInputType,
       onChanged: widget.onChanged,
       obscureText:
-          widget.hintText == S.of(context).password ? secureText : false,
+          handleSecurePassword(hitText: widget.hintText, context: context)
+              ? secureText
+              : false,
       style: AppTextStyles.textStyleMedium15,
       decoration: InputDecoration(
         filled: true,
         errorStyle: AppTextStyles.textStyleMedium14,
         hintText: widget.hintText,
         suffixIcon:
-            widget.hintText == S.of(context).password
+            handleSecurePassword(hitText: widget.hintText, context: context)
                 ? GestureDetector(
                   onTap: () {
                     if (secureIcon == AssetsIcon.secure2) {
@@ -102,5 +104,17 @@ class _CustomAuthenticationTextFromFieldState
       borderSide: BorderSide(color: AppColors.darkGrey.withValues(alpha: 0.2)),
       borderRadius: BorderRadius.circular(AppSize.s22),
     );
+  }
+}
+
+bool handleSecurePassword({
+  required String hitText,
+  required BuildContext context,
+}) {
+  if ((hitText == S.of(context).password) |
+      (hitText == S.of(context).newPassword)) {
+    return true;
+  } else {
+    return false;
   }
 }

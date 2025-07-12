@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/auth_functions/handle_login_background_color_gradient.dart';
-import 'package:ninga/features/authentication/presentation/widgets/forget_password_email_verification_auth_section.dart';
 import 'package:ninga/generated/l10n.dart';
 
 import 'custom_auth_title_and_appbar_section.dart';
+import 'reset_passwrod_password_and_new_password_section.dart';
 
-class ForgetPasswordViewBody extends StatelessWidget {
-  const ForgetPasswordViewBody({super.key});
+class ResetPasswordViewBody extends StatelessWidget {
+  const ResetPasswordViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +27,10 @@ class ForgetPasswordViewBody extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             CustomAuthTitleAndAppBar(
-              title: S.of(context).forgotPassword,
+              title: S.of(context).resetYourPassword,
               subTitle: S.of(context).selectContactDetails,
             ),
-            ForgetPasswordEmailVerificationAuthSection(),
+            ResetPasswrodPasswordAndNewPasswordSection(),
           ],
         ),
       ),
