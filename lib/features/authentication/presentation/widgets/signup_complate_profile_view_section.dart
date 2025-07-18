@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ninga/config/routes/app_router.dart';
@@ -81,7 +80,7 @@ class _SignUpComplateProfileViewBodySectionState
                 AppNavigation.pushName(
                   context: context,
                   argument: S.of(context).yourProfileIsReadyToUse,
-                  route: AppRoutes.sucessRestPassowrdView,
+                  route: AppRoutes.complateProfilePaymentsMethods,
                 );
               },
             ),

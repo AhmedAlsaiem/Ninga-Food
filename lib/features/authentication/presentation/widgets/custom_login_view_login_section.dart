@@ -13,9 +13,8 @@ import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
 class CustomLoginViewLoginSection extends StatelessWidget {
-  CustomLoginViewLoginSection({super.key, required this.brightness});
+  CustomLoginViewLoginSection({super.key, });
 
-  final Brightness brightness;
   final GlobalKey<FormState> loginkey = GlobalKey();
 
   @override
@@ -41,7 +40,7 @@ class CustomLoginViewLoginSection extends StatelessWidget {
               icon: AssetsIcon.password,
               onChanged: (value) {},
             ),
-            CustomSignUpOptionsSection(brightness: brightness),
+            CustomSignUpOptionsSection(),
             CustomTextButton(
               title: S.of(context).forgotPassword,
               onPressed: () {

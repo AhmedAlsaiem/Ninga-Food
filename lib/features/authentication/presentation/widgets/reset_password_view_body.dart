@@ -10,7 +10,6 @@ class ResetPasswordViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var brightness = MediaQuery.of(context).platformBrightness;
 
     return SingleChildScrollView(
       reverse: true,
@@ -18,7 +17,7 @@ class ResetPasswordViewBody extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           gradient: LinearGradient(
-            colors: handleAuthBackgroundColorGradient(context, brightness),
+            colors: handleAuthBackgroundColorGradient(context),
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),

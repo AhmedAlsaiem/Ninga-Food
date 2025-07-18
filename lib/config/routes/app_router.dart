@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/transitions/page_route_builder_method.dart';
+import 'package:ninga/features/authentication/presentation/view/complate_profile_payment_methods.dart';
 import 'package:ninga/features/authentication/presentation/view/forget_password_view.dart';
 import 'package:ninga/features/authentication/presentation/view/login_view.dart';
 import 'package:ninga/features/authentication/presentation/view/reset_password_view.dart';
@@ -73,6 +74,13 @@ class AppRouter {
               (context, animation, secondaryAnimation) =>
                   const SignUpComplateProfileView(),
         );
+      case AppRoutes.complateProfilePaymentsMethods:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) =>
+                  const ComplateProfilePaymentMethods(),
+        );
 
       default:
         return pageRouteBuilderMethod(
@@ -95,4 +103,6 @@ abstract class AppRoutes {
   static const String restPasswordView = '/restPassowrdView';
   static const String sucessRestPassowrdView = '/sucessResetPasswordView';
   static const String signUpComplateProfile = '/signUpComplateProfile';
+  static const String complateProfilePaymentsMethods =
+      '/complateProfilePaymentsMethods';
 }
