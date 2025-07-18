@@ -234,6 +234,26 @@ class S {
     return Intl.message('Google', name: 'google', desc: '', args: []);
   }
 
+  /// `Please Enter Your User Name`
+  String get pleaseEnterYourUsername {
+    return Intl.message(
+      'Please Enter Your User Name',
+      name: 'pleaseEnterYourUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Name Must Be At Least 3 Characters`
+  String get usernameMustBeAtLeast3Characters {
+    return Intl.message(
+      'User Name Must Be At Least 3 Characters',
+      name: 'usernameMustBeAtLeast3Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please enter your email address`
   String get pleaseEnterYourEmailAddress {
     return Intl.message(
@@ -259,6 +279,16 @@ class S {
     return Intl.message(
       'Forgot Your Password?',
       name: 'forgotYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Name Can Only Contain Letters And Numbers`
+  String get usernameCanOnlyContainLettersAndNumbers {
+    return Intl.message(
+      'User Name Can Only Contain Letters And Numbers',
+      name: 'usernameCanOnlyContainLettersAndNumbers',
       desc: '',
       args: [],
     );

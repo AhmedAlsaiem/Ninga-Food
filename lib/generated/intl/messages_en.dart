@@ -176,6 +176,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Please enter your Phone Number",
     ),
+    "pleaseEnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "Please Enter Your User Name",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("Popular Menu"),
     "process": MessageLookupByLibrary.simpleMessage("Process"),
@@ -227,6 +230,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "total": MessageLookupByLibrary.simpleMessage("Total"),
     "uploadYourPhoto": MessageLookupByLibrary.simpleMessage(
       "Upload Your Photo Profile",
+    ),
+    "usernameCanOnlyContainLettersAndNumbers":
+        MessageLookupByLibrary.simpleMessage(
+          "User Name Can Only Contain Letters And Numbers",
+        ),
+    "usernameMustBeAtLeast3Characters": MessageLookupByLibrary.simpleMessage(
+      "User Name Must Be At Least 3 Characters",
     ),
     "viaEmail": MessageLookupByLibrary.simpleMessage(
       "Via email: ●●●● @gmail.com",

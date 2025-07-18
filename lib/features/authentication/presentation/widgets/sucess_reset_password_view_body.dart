@@ -63,7 +63,7 @@ class SucessResetPasswordViewBody extends StatelessWidget {
                     route: AppRoutes.loginView,
                   );
                 },
-                title: S.of(context).back,
+                title: S.of(context).login,
               ),
               SizedBox(height: AppSize.s50),
             ],

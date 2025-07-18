@@ -10,7 +10,7 @@ class CustomAuthenticationTextFromField extends StatefulWidget {
   const CustomAuthenticationTextFromField({
     super.key,
     required this.validator,
-    required this.icon,
+    this.icon,
     required this.hintText,
     required this.onChanged,
     this.obsecureText = false,
@@ -18,7 +18,7 @@ class CustomAuthenticationTextFromField extends StatefulWidget {
   });
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
-  final String icon;
+  final String? icon;
   final String hintText;
   final bool obsecureText;
   final TextInputType textInputType;
@@ -73,11 +73,14 @@ class _CustomAuthenticationTextFromFieldState
                 : null,
         prefixIcon: Padding(
           padding: EdgeInsets.all(AppSize.s8),
-          child: SvgPicture.asset(
-            widget.icon,
-            height: AppSize.s10,
-            width: AppSize.s10,
-          ),
+          child:
+              widget.icon == null
+                  ? null
+                  : SvgPicture.asset(
+                    widget.icon!,
+                    height: AppSize.s10,
+                    width: AppSize.s10,
+                  ),
         ),
 
         contentPadding: EdgeInsets.symmetric(

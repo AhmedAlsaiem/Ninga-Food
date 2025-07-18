@@ -3,6 +3,7 @@ import 'package:ninga/core/functions/transitions/page_route_builder_method.dart'
 import 'package:ninga/features/authentication/presentation/view/forget_password_view.dart';
 import 'package:ninga/features/authentication/presentation/view/login_view.dart';
 import 'package:ninga/features/authentication/presentation/view/reset_password_view.dart';
+import 'package:ninga/features/authentication/presentation/view/sign_up_complate_profile_view.dart';
 import 'package:ninga/features/authentication/presentation/view/sign_up_view.dart';
 import 'package:ninga/features/authentication/presentation/view/foget_password_verification.dart';
 import 'package:ninga/features/authentication/presentation/view/sucess_resest_password_view.dart';
@@ -65,6 +66,13 @@ class AppRouter {
               (context, animation, secondaryAnimation) =>
                   const SucessResestPasswordView(),
         );
+      case AppRoutes.signUpComplateProfile:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) =>
+                  const SignUpComplateProfileView(),
+        );
 
       default:
         return pageRouteBuilderMethod(
@@ -86,4 +94,5 @@ abstract class AppRoutes {
       '/forgetPasswordVerification';
   static const String restPasswordView = '/restPassowrdView';
   static const String sucessRestPassowrdView = '/sucessResetPasswordView';
+  static const String signUpComplateProfile = '/signUpComplateProfile';
 }

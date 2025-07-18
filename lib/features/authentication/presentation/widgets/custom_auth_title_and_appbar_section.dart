@@ -6,7 +6,7 @@ import 'package:ninga/core/utils/app_color.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/styles_manager.dart';
 import '../../../../core/utils/assets_manager.dart';
-import 'triangleClipper.dart';
+import 'triangle_clipper.dart';
 
 class CustomAuthTitleAndAppBar extends StatelessWidget {
   const CustomAuthTitleAndAppBar({

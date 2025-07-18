@@ -15,14 +15,14 @@ import 'custom_text_button.dart';
 class CustomSignupViewSignupSection extends StatelessWidget {
   CustomSignupViewSignupSection({super.key});
 
-  final GlobalKey<FormState> loginkey = GlobalKey();
+  final GlobalKey<FormState> signUpKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSize.s12),
       child: Form(
-        key: loginkey,
+        key: signUpKey,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -31,7 +31,7 @@ class CustomSignupViewSignupSection extends StatelessWidget {
               textInputType: TextInputType.number,
               validator: validationPhoneNumberMethod(context: context),
               hintText: S.of(context).phoneNumber,
-              icon: AssetsIcon.userName1,
+              icon: AssetsIcon.sendMessage,
               onChanged: (value) {},
             ),
             SizedBox(height: AppSize.s12),
@@ -41,7 +41,7 @@ class CustomSignupViewSignupSection extends StatelessWidget {
               icon: AssetsIcon.emailIcon,
               onChanged: (value) {},
             ),
-            SizedBox(height: AppSize.s20),
+            SizedBox(height: AppSize.s12),
             CustomAuthenticationTextFromField(
               validator: validationPasswordMethod(context: context),
               hintText: S.of(context).password,
@@ -56,7 +56,11 @@ class CustomSignupViewSignupSection extends StatelessWidget {
 
             CustomAppTextButton(
               onPressed: () {
-                if (loginkey.currentState!.validate()) {}
+                if (signUpKey.currentState!.validate()) {}
+                AppNavigation.pushName(
+                  context: context,
+                  route: AppRoutes.signUpComplateProfile,
+                );
               },
               title: S.of(context).createAccount,
             ),
@@ -70,6 +74,7 @@ class CustomSignupViewSignupSection extends StatelessWidget {
               },
             ),
             SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
+            SizedBox(height: AppSize.s12),
           ],
         ),
       ),

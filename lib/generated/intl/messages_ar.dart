@@ -165,6 +165,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "ادخل كلمه رقم الهاتف",
     ),
+    "pleaseEnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "الرجاء ادخال اسم المستخدم",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("شائع"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("قائمة شائعة"),
     "process": MessageLookupByLibrary.simpleMessage("معالجة"),
@@ -212,6 +215,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "total": MessageLookupByLibrary.simpleMessage("المجموع"),
     "uploadYourPhoto": MessageLookupByLibrary.simpleMessage(
       "قم بتحميل صورتك الشخصية",
+    ),
+    "usernameCanOnlyContainLettersAndNumbers":
+        MessageLookupByLibrary.simpleMessage(
+          "الاسم يجب ان يحتوى على حروف وارقام فقط",
+        ),
+    "usernameMustBeAtLeast3Characters": MessageLookupByLibrary.simpleMessage(
+      "الاسم يجب ان يحتوى على 3 حروف على الاقل",
     ),
     "viaEmail": MessageLookupByLibrary.simpleMessage(
       "عبر البريد الإلكتروني: ●●●● @gmail.com",
