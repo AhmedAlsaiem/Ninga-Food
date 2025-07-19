@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ninga/config/routes/app_router.dart';
 import 'package:ninga/core/functions/auth_functions/handle_login_background_color_gradient.dart';
+import 'package:ninga/core/functions/navigation/navigation.dart';
 import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/assets_manager.dart';
@@ -41,7 +43,12 @@ class ComplateProfilePaymentMethodsBody extends StatelessWidget {
                 SizedBox(height: AppSize.s20),
                 SizedBox(height: context.screenHeight * 0.17),
                 CustomAppTextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AppNavigation.pushName(
+                      context: context,
+                      route: AppRoutes.addProfileImageView,
+                    );
+                  },
                   title: S.of(context).next,
                 ),
                 SizedBox(height: AppSize.s24.h),
