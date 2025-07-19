@@ -1,3 +1,3 @@
 abstract class HiveKeys {
-  static const String boxName = 'ningaFoodAppSateModel';
+  static const String kBoxName = 'ninga_food_box';
 }
