@@ -22,6 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "InvalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف غير صحيح",
+    ),
+    "Invalidemailformat": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني غير صحيح",
+    ),
+    "SignUp": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "accountProfileSecurityNote": MessageLookupByLibrary.simpleMessage(
       "ستظهر هذه البيانات في ملفك الشخصي لأغراض الأمان",
     ),
@@ -30,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "هل لديك حساب بالفعل؟",
     ),
     "appName": MessageLookupByLibrary.simpleMessage("نينجا الطعام"),
+    "back": MessageLookupByLibrary.simpleMessage("رجوع"),
     "buyAgain": MessageLookupByLibrary.simpleMessage("شراء مرة أخرى"),
     "callDuration": MessageLookupByLibrary.simpleMessage("15.23 دقيقة"),
     "chat": MessageLookupByLibrary.simpleMessage("الدردشة"),
@@ -41,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirmPassword": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور",
     ),
+    "congrats": MessageLookupByLibrary.simpleMessage("اهلاا"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "deliverFavoriteFood": MessageLookupByLibrary.simpleMessage(
       "توصيل الطعام المفضل",
@@ -124,6 +133,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم قبول طلبك من قبل السائق",
     ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordMustBeAtLeast6Characters": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور يجب أن تكون على الأقل 6 أحرف",
+    ),
+    "passwordresetsuccesful": MessageLookupByLibrary.simpleMessage(
+      "تم تغيير كلمة المرور",
+    ),
     "paymentCardMasked": MessageLookupByLibrary.simpleMessage(
       "2121 6352 8465 ****",
     ),
@@ -139,7 +154,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "paymentMethod": MessageLookupByLibrary.simpleMessage("طريقة الدفع"),
     "payoneer": MessageLookupByLibrary.simpleMessage("بايونير"),
     "paypal": MessageLookupByLibrary.simpleMessage("باي بال"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "placeMyOrder": MessageLookupByLibrary.simpleMessage("تقديم طلبي"),
+    "pleaseEnterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
+      " أدخل البريد الإلكتروني",
+    ),
+    "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "ادخل كلمه المرور",
+    ),
+    "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "ادخل كلمه رقم الهاتف",
+    ),
+    "pleaseEnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "الرجاء ادخال اسم المستخدم",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("شائع"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("قائمة شائعة"),
     "process": MessageLookupByLibrary.simpleMessage("معالجة"),
@@ -188,6 +216,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "uploadYourPhoto": MessageLookupByLibrary.simpleMessage(
       "قم بتحميل صورتك الشخصية",
     ),
+    "usernameCanOnlyContainLettersAndNumbers":
+        MessageLookupByLibrary.simpleMessage(
+          "الاسم يجب ان يحتوى على حروف وارقام فقط",
+        ),
+    "usernameMustBeAtLeast3Characters": MessageLookupByLibrary.simpleMessage(
+      "الاسم يجب ان يحتوى على 3 حروف على الاقل",
+    ),
     "viaEmail": MessageLookupByLibrary.simpleMessage(
       "عبر البريد الإلكتروني: ●●●● @gmail.com",
     ),
@@ -201,5 +236,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "wijieBarAndResto": MessageLookupByLibrary.simpleMessage("مطعم وبار ويجي"),
     "youHave3Voucher": MessageLookupByLibrary.simpleMessage("لديك 3 قسائم"),
     "yourLocation": MessageLookupByLibrary.simpleMessage("موقعك"),
+    "yourProfileIsReadyToUse": MessageLookupByLibrary.simpleMessage(
+      "حسابك جاهز الآن",
+    ),
   };
 }

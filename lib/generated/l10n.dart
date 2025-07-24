@@ -54,9 +54,29 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Food Ninja`
+  /// `FoodNinja`
   String get appName {
-    return Intl.message('Food Ninja', name: 'appName', desc: '', args: []);
+    return Intl.message('FoodNinja', name: 'appName', desc: '', args: []);
+  }
+
+  /// `Find your  Comfort Food here`
+  String get findyourComfortFoodhere {
+    return Intl.message(
+      'Find your  Comfort Food here',
+      name: 'findyourComfortFoodhere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here You Can find a chef or dish for every taste and color. Enjoy!`
+  String get hereYouCanfindachefordishforeverytaste {
+    return Intl.message(
+      'Here You Can find a chef or dish for every taste and color. Enjoy!',
+      name: 'hereYouCanfindachefordishforeverytaste',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Deliver Favorite Food`
@@ -67,6 +87,51 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Enjoy a fast and smooth food delivery at your doorstep`
+  String get enjoyFastAndSmoth {
+    return Intl.message(
+      'Enjoy a fast and smooth food delivery at your doorstep',
+      name: 'enjoyFastAndSmoth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food Ninja is Where Your Comfort Food Lives`
+  String get foodNinjaisWhere {
+    return Intl.message(
+      'Food Ninja is Where Your Comfort Food Lives',
+      name: 'foodNinjaisWhere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password reset succesful`
+  String get passwordresetsuccesful {
+    return Intl.message(
+      'Password reset succesful',
+      name: 'passwordresetsuccesful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Profile Is Ready To Use`
+  String get yourProfileIsReadyToUse {
+    return Intl.message(
+      'Your Profile Is Ready To Use',
+      name: 'yourProfileIsReadyToUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message('Back', name: 'back', desc: '', args: []);
   }
 
   /// `Login To Your Account`
@@ -84,9 +149,24 @@ class S {
     return Intl.message('Email', name: 'email', desc: '', args: []);
   }
 
+  /// `SignUp`
+  String get SignUp {
+    return Intl.message('SignUp', name: 'SignUp', desc: '', args: []);
+  }
+
   /// `Password`
   String get password {
     return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Or Continue With`
@@ -99,9 +179,54 @@ class S {
     );
   }
 
+  /// `Please enter your password`
+  String get pleaseEnterYourPassword {
+    return Intl.message(
+      'Please enter your password',
+      name: 'pleaseEnterYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your Phone Number`
+  String get pleaseEnterYourPhoneNumber {
+    return Intl.message(
+      'Please enter your Phone Number',
+      name: 'pleaseEnterYourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `InValid Phone Number`
+  String get InvalidPhoneNumber {
+    return Intl.message(
+      'InValid Phone Number',
+      name: 'InvalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password Must Be At Least 6 Characters`
+  String get passwordMustBeAtLeast6Characters {
+    return Intl.message(
+      'Password Must Be At Least 6 Characters',
+      name: 'passwordMustBeAtLeast6Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Facebook`
   String get facebook {
     return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `Congrats!`
+  String get congrats {
+    return Intl.message('Congrats!', name: 'congrats', desc: '', args: []);
   }
 
   /// `Google`
@@ -109,11 +234,61 @@ class S {
     return Intl.message('Google', name: 'google', desc: '', args: []);
   }
 
+  /// `Please Enter Your User Name`
+  String get pleaseEnterYourUsername {
+    return Intl.message(
+      'Please Enter Your User Name',
+      name: 'pleaseEnterYourUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Name Must Be At Least 3 Characters`
+  String get usernameMustBeAtLeast3Characters {
+    return Intl.message(
+      'User Name Must Be At Least 3 Characters',
+      name: 'usernameMustBeAtLeast3Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email address`
+  String get pleaseEnterYourEmailAddress {
+    return Intl.message(
+      'Please enter your email address',
+      name: 'pleaseEnterYourEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email format`
+  String get Invalidemailformat {
+    return Intl.message(
+      'Invalid email format',
+      name: 'Invalidemailformat',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Forgot Your Password?`
   String get forgotYourPassword {
     return Intl.message(
       'Forgot Your Password?',
       name: 'forgotYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Name Can Only Contain Letters And Numbers`
+  String get usernameCanOnlyContainLettersAndNumbers {
+    return Intl.message(
+      'User Name Can Only Contain Letters And Numbers',
+      name: 'usernameCanOnlyContainLettersAndNumbers',
       desc: '',
       args: [],
     );

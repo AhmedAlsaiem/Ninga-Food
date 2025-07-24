@@ -22,6 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "InvalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "InValid Phone Number",
+    ),
+    "Invalidemailformat": MessageLookupByLibrary.simpleMessage(
+      "Invalid email format",
+    ),
+    "SignUp": MessageLookupByLibrary.simpleMessage("SignUp"),
     "accountProfileSecurityNote": MessageLookupByLibrary.simpleMessage(
       "This data will be displayed in your account profile for security",
     ),
@@ -29,7 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "already have an account?",
     ),
-    "appName": MessageLookupByLibrary.simpleMessage("Food Ninja"),
+    "appName": MessageLookupByLibrary.simpleMessage("FoodNinja"),
+    "back": MessageLookupByLibrary.simpleMessage("Back"),
     "buyAgain": MessageLookupByLibrary.simpleMessage("Buy Again"),
     "callDuration": MessageLookupByLibrary.simpleMessage("15.23 Min"),
     "chat": MessageLookupByLibrary.simpleMessage("Chat"),
@@ -39,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm Order"),
     "confirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
+    "congrats": MessageLookupByLibrary.simpleMessage("Congrats!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "deliverFavoriteFood": MessageLookupByLibrary.simpleMessage(
       "Deliver Favorite Food",
@@ -54,6 +63,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailMeAboutSpecialPricing": MessageLookupByLibrary.simpleMessage(
       "Email Me About Special Pricing",
     ),
+    "enjoyFastAndSmoth": MessageLookupByLibrary.simpleMessage(
+      "Enjoy a fast and smooth food delivery at your doorstep",
+    ),
     "enjoyYourMeal": MessageLookupByLibrary.simpleMessage("Enjoy Your Meal"),
     "enter4DigitCode": MessageLookupByLibrary.simpleMessage(
       "Enter 4-digit Verification code",
@@ -63,13 +75,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "fillInYourBio": MessageLookupByLibrary.simpleMessage(
       "Fill in your bio to get started",
     ),
+    "findyourComfortFoodhere": MessageLookupByLibrary.simpleMessage(
+      "Find your  Comfort Food here",
+    ),
     "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
+    "foodNinjaisWhere": MessageLookupByLibrary.simpleMessage(
+      "Food Ninja is Where Your Comfort Food Lives",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password?"),
     "forgotYourPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot Your Password?",
     ),
     "fromGallery": MessageLookupByLibrary.simpleMessage("From Gallery"),
     "google": MessageLookupByLibrary.simpleMessage("Google"),
+    "hereYouCanfindachefordishforeverytaste":
+        MessageLookupByLibrary.simpleMessage(
+          "Here You Can find a chef or dish for every taste and color. Enjoy!",
+        ),
     "keepMeSignedIn": MessageLookupByLibrary.simpleMessage("Keep Me Signed In"),
     "kmRating": MessageLookupByLibrary.simpleMessage("19 Km 4,8 Rating"),
     "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
@@ -122,6 +144,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your order has been taken by the driver",
     ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordMustBeAtLeast6Characters": MessageLookupByLibrary.simpleMessage(
+      "Password Must Be At Least 6 Characters",
+    ),
+    "passwordresetsuccesful": MessageLookupByLibrary.simpleMessage(
+      "Password reset succesful",
+    ),
     "paymentCardMasked": MessageLookupByLibrary.simpleMessage(
       "2121 6352 8465 ****",
     ),
@@ -137,7 +165,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
     "payoneer": MessageLookupByLibrary.simpleMessage("Payoneer"),
     "paypal": MessageLookupByLibrary.simpleMessage("PayPal"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "placeMyOrder": MessageLookupByLibrary.simpleMessage("Place My Order"),
+    "pleaseEnterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
+      "Please enter your email address",
+    ),
+    "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "Please enter your password",
+    ),
+    "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter your Phone Number",
+    ),
+    "pleaseEnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "Please Enter Your User Name",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("Popular Menu"),
     "process": MessageLookupByLibrary.simpleMessage("Process"),
@@ -190,6 +231,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "uploadYourPhoto": MessageLookupByLibrary.simpleMessage(
       "Upload Your Photo Profile",
     ),
+    "usernameCanOnlyContainLettersAndNumbers":
+        MessageLookupByLibrary.simpleMessage(
+          "User Name Can Only Contain Letters And Numbers",
+        ),
+    "usernameMustBeAtLeast3Characters": MessageLookupByLibrary.simpleMessage(
+      "User Name Must Be At Least 3 Characters",
+    ),
     "viaEmail": MessageLookupByLibrary.simpleMessage(
       "Via email: ●●●● @gmail.com",
     ),
@@ -205,5 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "You Have 3 Voucher",
     ),
     "yourLocation": MessageLookupByLibrary.simpleMessage("Your Location"),
+    "yourProfileIsReadyToUse": MessageLookupByLibrary.simpleMessage(
+      "Your Profile Is Ready To Use",
+    ),
   };
 }
