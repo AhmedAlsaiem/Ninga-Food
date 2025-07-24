@@ -80,7 +80,8 @@ class _ForgetPasswordEmailVerificationAuthSectionState
             ),
             SizedBox(height: AppSize.s8),
             SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-            SizedBox(height: AppSize.s30.h),
+            SizedBox(height: AppSize.s10.h),
+            //adadladl
           ],
         ),
       ),
