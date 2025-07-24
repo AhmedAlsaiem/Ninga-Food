@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "already have an account?",
     ),
     "appName": MessageLookupByLibrary.simpleMessage("FoodNinja"),
+    "back": MessageLookupByLibrary.simpleMessage("Back"),
     "buyAgain": MessageLookupByLibrary.simpleMessage("Buy Again"),
     "callDuration": MessageLookupByLibrary.simpleMessage("15.23 Min"),
     "chat": MessageLookupByLibrary.simpleMessage("Chat"),
@@ -46,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm Order"),
     "confirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
+    "congrats": MessageLookupByLibrary.simpleMessage("Congrats!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "deliverFavoriteFood": MessageLookupByLibrary.simpleMessage(
       "Deliver Favorite Food",
@@ -145,6 +147,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordMustBeAtLeast6Characters": MessageLookupByLibrary.simpleMessage(
       "Password Must Be At Least 6 Characters",
     ),
+    "passwordresetsuccesful": MessageLookupByLibrary.simpleMessage(
+      "Password reset succesful",
+    ),
     "paymentCardMasked": MessageLookupByLibrary.simpleMessage(
       "2121 6352 8465 ****",
     ),
@@ -170,6 +175,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Please enter your Phone Number",
+    ),
+    "pleaseEnterYourUsername": MessageLookupByLibrary.simpleMessage(
+      "Please Enter Your User Name",
     ),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
     "popularMenu": MessageLookupByLibrary.simpleMessage("Popular Menu"),
@@ -223,6 +231,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "uploadYourPhoto": MessageLookupByLibrary.simpleMessage(
       "Upload Your Photo Profile",
     ),
+    "usernameCanOnlyContainLettersAndNumbers":
+        MessageLookupByLibrary.simpleMessage(
+          "User Name Can Only Contain Letters And Numbers",
+        ),
+    "usernameMustBeAtLeast3Characters": MessageLookupByLibrary.simpleMessage(
+      "User Name Must Be At Least 3 Characters",
+    ),
     "viaEmail": MessageLookupByLibrary.simpleMessage(
       "Via email: ●●●● @gmail.com",
     ),
@@ -238,5 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "You Have 3 Voucher",
     ),
     "yourLocation": MessageLookupByLibrary.simpleMessage("Your Location"),
+    "yourProfileIsReadyToUse": MessageLookupByLibrary.simpleMessage(
+      "Your Profile Is Ready To Use",
+    ),
   };
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ninga/config/routes/app_router.dart';
 import 'package:ninga/core/functions/navigation/navigation.dart';
+import 'package:ninga/core/functions/network/change_onboarding_state.dart';
 import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/assets_manager.dart';
@@ -16,6 +18,13 @@ class OnboardingViewbody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
+      onFinish: () {
+        changeOnboardingState();
+        AppNavigation.pushWithReplacement(
+          context: context,
+          route: AppRoutes.loginView,
+        );
+      },
       controllerColor: AppColors.mainColorEnd,
       headerBackgroundColor: Theme.of(context).colorScheme.primary,
       finishButtonText: 'Register',
@@ -34,6 +43,7 @@ class OnboardingViewbody extends StatelessWidget {
         ),
       ),
       trailingFunction: () {
+        changeOnboardingState();
         AppNavigation.pushWithReplacement(
           context: context,
           route: AppRoutes.loginView,
@@ -57,7 +67,7 @@ class OnboardingViewbody extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 440),
+              SizedBox(height: 440.h),
               SizedBox(
                 width: context.screenWidth * 0.7,
                 child: Text(

@@ -29,7 +29,7 @@ class _SecurityOptionsForKeypMySignInState
             setState(() {});
           },
           child: CircleAvatar(
-            radius: AppSize.s16,
+            radius: AppSize.s12,
             backgroundColor:
                 isTrue ? AppColors.mainColorEnd : AppColors.darkGrey,
             child: Icon(

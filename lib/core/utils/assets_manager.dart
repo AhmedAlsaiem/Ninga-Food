@@ -8,7 +8,7 @@ abstract class AssetsImage {
   static const String onboarding1 = 'assets/images/onbording1.svg';
   static const String onboarding2 = 'assets/images/onboarding2.svg';
   static const String onboarding3 = 'assets/images/onboarding3.svg';
-  static const String payoneer = 'assets/images/payoneer.png';
+  static const String payoneer = 'assets/icons/payoneer.svg';
   static const String paypal = 'assets/images/paypal.svg';
   static const String profilePhoto = 'assets/images/profile_Photo.png';
   static const String promo1 = 'assets/images/promo1.svg';

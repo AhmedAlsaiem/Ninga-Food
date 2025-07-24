@@ -109,6 +109,31 @@ class S {
     );
   }
 
+  /// `Password reset succesful`
+  String get passwordresetsuccesful {
+    return Intl.message(
+      'Password reset succesful',
+      name: 'passwordresetsuccesful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Profile Is Ready To Use`
+  String get yourProfileIsReadyToUse {
+    return Intl.message(
+      'Your Profile Is Ready To Use',
+      name: 'yourProfileIsReadyToUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message('Back', name: 'back', desc: '', args: []);
+  }
+
   /// `Login To Your Account`
   String get loginToYourAccount {
     return Intl.message(
@@ -199,9 +224,34 @@ class S {
     return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
   }
 
+  /// `Congrats!`
+  String get congrats {
+    return Intl.message('Congrats!', name: 'congrats', desc: '', args: []);
+  }
+
   /// `Google`
   String get google {
     return Intl.message('Google', name: 'google', desc: '', args: []);
+  }
+
+  /// `Please Enter Your User Name`
+  String get pleaseEnterYourUsername {
+    return Intl.message(
+      'Please Enter Your User Name',
+      name: 'pleaseEnterYourUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Name Must Be At Least 3 Characters`
+  String get usernameMustBeAtLeast3Characters {
+    return Intl.message(
+      'User Name Must Be At Least 3 Characters',
+      name: 'usernameMustBeAtLeast3Characters',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Please enter your email address`
@@ -229,6 +279,16 @@ class S {
     return Intl.message(
       'Forgot Your Password?',
       name: 'forgotYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Name Can Only Contain Letters And Numbers`
+  String get usernameCanOnlyContainLettersAndNumbers {
+    return Intl.message(
+      'User Name Can Only Contain Letters And Numbers',
+      name: 'usernameCanOnlyContainLettersAndNumbers',
       desc: '',
       args: [],
     );

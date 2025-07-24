@@ -10,7 +10,7 @@ class CustomAuthenticationTextFromField extends StatefulWidget {
   const CustomAuthenticationTextFromField({
     super.key,
     required this.validator,
-    required this.icon,
+    this.icon,
     required this.hintText,
     required this.onChanged,
     this.obsecureText = false,
@@ -18,7 +18,7 @@ class CustomAuthenticationTextFromField extends StatefulWidget {
   });
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
-  final String icon;
+  final String? icon;
   final String hintText;
   final bool obsecureText;
   final TextInputType textInputType;
@@ -35,17 +35,20 @@ class _CustomAuthenticationTextFromFieldState
   Widget build(BuildContext context) {
     var brightness = MediaQuery.of(context).platformBrightness;
     return TextFormField(
+      cursorColor: AppColors.mainColorStart,
       keyboardType: widget.textInputType,
       onChanged: widget.onChanged,
       obscureText:
-          widget.hintText == S.of(context).password ? secureText : false,
+          handleSecurePassword(hitText: widget.hintText, context: context)
+              ? secureText
+              : false,
       style: AppTextStyles.textStyleMedium15,
       decoration: InputDecoration(
         filled: true,
         errorStyle: AppTextStyles.textStyleMedium14,
         hintText: widget.hintText,
         suffixIcon:
-            widget.hintText == S.of(context).password
+            handleSecurePassword(hitText: widget.hintText, context: context)
                 ? GestureDetector(
                   onTap: () {
                     if (secureIcon == AssetsIcon.secure2) {
@@ -70,11 +73,14 @@ class _CustomAuthenticationTextFromFieldState
                 : null,
         prefixIcon: Padding(
           padding: EdgeInsets.all(AppSize.s8),
-          child: SvgPicture.asset(
-            widget.icon,
-            height: AppSize.s10,
-            width: AppSize.s10,
-          ),
+          child:
+              widget.icon == null
+                  ? null
+                  : SvgPicture.asset(
+                    widget.icon!,
+                    height: AppSize.s10,
+                    width: AppSize.s10,
+                  ),
         ),
 
         contentPadding: EdgeInsets.symmetric(
@@ -101,5 +107,17 @@ class _CustomAuthenticationTextFromFieldState
       borderSide: BorderSide(color: AppColors.darkGrey.withValues(alpha: 0.2)),
       borderRadius: BorderRadius.circular(AppSize.s22),
     );
+  }
+}
+
+bool handleSecurePassword({
+  required String hitText,
+  required BuildContext context,
+}) {
+  if ((hitText == S.of(context).password) |
+      (hitText == S.of(context).newPassword)) {
+    return true;
+  } else {
+    return false;
   }
 }

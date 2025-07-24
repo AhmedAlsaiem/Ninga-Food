@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ninga/config/routes/app_router.dart';
 import 'package:ninga/core/functions/navigation/navigation.dart';
 import 'package:ninga/core/functions/text_from_field_methods/validation_password_method.dart';
@@ -12,9 +13,8 @@ import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
 class CustomLoginViewLoginSection extends StatelessWidget {
-  CustomLoginViewLoginSection({super.key, required this.brightness});
+  CustomLoginViewLoginSection({super.key, });
 
-  final Brightness brightness;
   final GlobalKey<FormState> loginkey = GlobalKey();
 
   @override
@@ -40,7 +40,7 @@ class CustomLoginViewLoginSection extends StatelessWidget {
               icon: AssetsIcon.password,
               onChanged: (value) {},
             ),
-            CustomSignUpOptionsSection(brightness: brightness),
+            CustomSignUpOptionsSection(),
             CustomTextButton(
               title: S.of(context).forgotPassword,
               onPressed: () {
@@ -59,7 +59,7 @@ class CustomLoginViewLoginSection extends StatelessWidget {
             ),
 
             SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-            SizedBox(height: AppSize.s80),
+            SizedBox(height: AppSize.s50.h),
           ],
         ),
       ),

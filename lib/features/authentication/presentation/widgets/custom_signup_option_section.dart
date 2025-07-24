@@ -10,15 +10,14 @@ import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
 class CustomSignUpOptionsSection extends StatelessWidget {
-  const CustomSignUpOptionsSection({super.key, required this.brightness});
+  const CustomSignUpOptionsSection({super.key, });
 
-  final Brightness brightness;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: AppSize.s8),
+        SizedBox(height: AppSize.s2),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,19 +42,16 @@ class CustomSignUpOptionsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LoginOptionItem(
-              brightness: brightness,
               image: AssetsImage.facebook,
               title: S.of(context).facebook,
             ),
             SizedBox(width: AppSize.s30),
             LoginOptionItem(
-              brightness: brightness,
               image: AssetsImage.google,
               title: S.of(context).google,
             ),
           ],
         ),
-        SizedBox(height: AppSize.s10),
       ],
     );
   }

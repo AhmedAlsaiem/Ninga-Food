@@ -9,12 +9,11 @@ class SignUpViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var brightness = MediaQuery.of(context).platformBrightness;
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: handleAuthBackgroundColorGradient(context, brightness),
+            colors: handleAuthBackgroundColorGradient(context),
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -25,7 +24,7 @@ class SignUpViewBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               CustomLogoAuthSection(),
-              CustomSignupViewSignupSection(brightness: brightness),
+              CustomSignupViewSignupSection(),
             ],
           ),
         ),

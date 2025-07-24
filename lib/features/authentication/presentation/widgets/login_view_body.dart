@@ -8,23 +8,23 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var brightness = MediaQuery.of(context).platformBrightness;
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: handleAuthBackgroundColorGradient(context, brightness),
+            colors: handleAuthBackgroundColorGradient(context),
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
         child: SingleChildScrollView(
+          
           reverse: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               CustomLogoAuthSection(),
-              CustomLoginViewLoginSection(brightness: brightness),
+              CustomLoginViewLoginSection(),
             ],
           ),
         ),

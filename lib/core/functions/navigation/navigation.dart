@@ -1,26 +1,31 @@
-
 import 'package:flutter/material.dart';
 
 abstract class AppNavigation {
-//? navigation without delay
+  //? navigation without delay
   static void pushName({
     required BuildContext context,
     required String route,
+    String? argument,
     bool rootNavigator = false,
-
   }) {
-     Navigator.of(context, rootNavigator: rootNavigator).pushNamed(route);
-
+    Navigator.of(
+      context,
+      rootNavigator: rootNavigator,
+    ).pushNamed(route, arguments: argument);
   }
 
-static void pushWithReplacement({
+  static void pushWithReplacement({
     required BuildContext context,
     required String route,
-    bool rootNavigator = false, 
+    bool rootNavigator = false,
   }) {
-    Navigator.of(context, rootNavigator: rootNavigator).pushReplacementNamed(route);
+    Navigator.of(
+      context,
+      rootNavigator: rootNavigator,
+    ).pushReplacementNamed(route);
   }
-//? navigation with delay time
+
+  //? navigation with delay time
   static void navigationdelay({
     required BuildContext context,
     required String route,
@@ -30,9 +35,8 @@ static void pushWithReplacement({
       Navigator.pushNamed(context, route);
     });
   }
-  static void pop({
-    required BuildContext context,
-  }) {
+
+  static void pop({required BuildContext context}) {
     Navigator.pop(context);
   }
 }
