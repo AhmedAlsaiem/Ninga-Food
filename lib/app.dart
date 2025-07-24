@@ -7,6 +7,7 @@ import 'package:ninga/config/theme/light_theme.dart';
 import 'package:ninga/core/widgets/app_wrapper.dart';
 
 import 'config/routes/app_router.dart';
+import 'core/functions/network/inital_route_method.dart';
 import 'generated/l10n.dart';
 
 class Ninga extends StatelessWidget {
@@ -24,6 +25,7 @@ class Ninga extends StatelessWidget {
             builder: (context, child) {
               return AppWrapper(
                 child: MaterialApp(
+                  
                   locale: const Locale('en'),
                   localizationsDelegates: customLocalizationDelegates,
                   supportedLocales: S.delegate.supportedLocales,
@@ -32,7 +34,7 @@ class Ninga extends StatelessWidget {
                   darkTheme: darkTheme(),
                   themeMode: ThemeMode.system,
                   onGenerateRoute: AppRouter.generateRoute,
-                  initialRoute: AppRoutes.loginView,
+                  initialRoute:initalRouteMethod() ,
                 ),
               );
             },
