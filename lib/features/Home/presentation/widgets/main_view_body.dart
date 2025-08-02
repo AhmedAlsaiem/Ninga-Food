@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
 import 'package:ninga/features/Home/presentation/views/home_view.dart';
 import 'package:ninga/features/chat/presentation/views/chat_view.dart';
 import 'package:ninga/features/profile/presentation/views/profile_view.dart';
 import 'package:ninga/features/shopping/presentation/views/shopping_view.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
+import 'package:badges/badges.dart' as badges;
 
 class MainViewBody extends StatefulWidget {
   const MainViewBody({super.key});
@@ -31,6 +32,11 @@ class _MainViewBodyState extends State<MainViewBody> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
+      decoration: NavBarDecoration(borderRadius: BorderRadius.circular(20)),
+      margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
+      backgroundColor: Color(0XFF252525),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+      navBarHeight: MediaQuery.sizeOf(context).height * 0.09,
       context,
       controller: controller,
       screens: screens(),
@@ -57,32 +63,58 @@ List<Widget> screens() {
 List<PersistentBottomNavBarItem> items() {
   return [
     PersistentBottomNavBarItem(
-      icon: Icon(CupertinoIcons.home),
-      title: 'Home',
-      activeColorPrimary: CupertinoColors.activeBlue,
-      inactiveColorPrimary: CupertinoColors.systemGrey,
-      textStyle: TextStyle(fontWeight: FontWeight.w400),
+      icon: const Icon(IconlyBold.home, color: Color(0XFF53E88B)),
+      title: ("Home"),
+      textStyle: TextStyle(
+        color: Color(0XFFFFFFFF),
+        fontSize: 13,
+        fontFamily: 'BentonSans',
+      ),
+      activeColorPrimary: Color(0XFFFFFFFF),
     ),
     PersistentBottomNavBarItem(
-      icon: Icon(CupertinoIcons.shopping_cart),
-      title: 'Shopping',
-      textStyle: TextStyle(fontWeight: FontWeight.w400),
-      activeColorPrimary: CupertinoColors.activeBlue,
-      inactiveColorPrimary: CupertinoColors.systemGrey,
-    ),
-     PersistentBottomNavBarItem(
-      icon: Icon(CupertinoIcons.book),
-      title: 'Books',
-      activeColorPrimary: CupertinoColors.activeBlue,
-      inactiveColorPrimary: CupertinoColors.systemGrey,
-      textStyle: TextStyle(fontWeight: FontWeight.w400),
+      icon: const Icon(IconlyBold.profile, color: Color(0XFF53E88B)),
+      title: ("Profile"),
+      textStyle: TextStyle(
+        color: Color(0XFFFFFFFF),
+        fontSize: 13,
+        fontFamily: 'BentonSans',
+      ),
+      activeColorPrimary: Color(0XFFFFFFFF),
     ),
     PersistentBottomNavBarItem(
-      icon: Icon(CupertinoIcons.settings),
-      title: 'Setting',
-      textStyle: TextStyle(fontWeight: FontWeight.w400),
-      activeColorPrimary: CupertinoColors.activeBlue,
-      inactiveColorPrimary: CupertinoColors.systemGrey,
+      icon: badges.Badge(
+        badgeStyle: const badges.BadgeStyle(
+          badgeColor: Colors.red,
+          padding: EdgeInsets.all(6),
+        ),
+        position: badges.BadgePosition.topEnd(top: -4, end: -4),
+        child: const Icon(IconlyBold.buy, color: Color(0XFF53E88B)),
+      ),
+      title: ("Shop"),
+      textStyle: TextStyle(
+        color: Color(0XFFFFFFFF),
+        fontSize: 13,
+        fontFamily: 'BentonSans',
+      ),
+      activeColorPrimary: Color(0XFFFFFFFF),
+    ),
+    PersistentBottomNavBarItem(
+      icon: badges.Badge(
+        badgeStyle: const badges.BadgeStyle(
+          badgeColor: Colors.red,
+          padding: EdgeInsets.all(6),
+        ),
+        position: badges.BadgePosition.topEnd(top: -4, end: -4),
+        child: const Icon(IconlyBold.chat, color: Color(0XFF53E88B)),
+      ),
+      title: ("Chat"),
+      textStyle: TextStyle(
+        color: Color(0XFFFFFFFF),
+        fontSize: 13,
+        fontFamily: 'BentonSans',
+      ),
+      activeColorPrimary: Color(0XFFFFFFFF),
     ),
   ];
 }

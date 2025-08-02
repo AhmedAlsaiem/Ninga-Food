@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  badges: ^3.1.2
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   device_preview: ^1.2.0
@@ -44,6 +45,7 @@ dependencies:
   flutter_svg: ^2.2.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  iconly: ^1.0.1
   intl: 0.20.2
   persistent_bottom_nav_bar: ^6.2.1
   screenutil_module: ^1.1.0

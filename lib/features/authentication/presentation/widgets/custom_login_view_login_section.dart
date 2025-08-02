@@ -56,7 +56,7 @@ class CustomLoginViewLoginSection extends StatelessWidget {
                 if (loginkey.currentState!.validate()) {
                   AppNavigation.pushName(
                     context: context,
-                    route: AppRoutes.,
+                    route: AppRoutes.mainview,
                   );
                 }
               },
