@@ -13,7 +13,7 @@ import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
 class CustomLoginViewLoginSection extends StatelessWidget {
-  CustomLoginViewLoginSection({super.key, });
+  CustomLoginViewLoginSection({super.key});
 
   final GlobalKey<FormState> loginkey = GlobalKey();
 
@@ -53,7 +53,12 @@ class CustomLoginViewLoginSection extends StatelessWidget {
             SizedBox(height: AppSize.s8),
             CustomAppTextButton(
               onPressed: () {
-                if (loginkey.currentState!.validate()) {}
+                if (loginkey.currentState!.validate()) {
+                  AppNavigation.pushName(
+                    context: context,
+                    route: AppRoutes.,
+                  );
+                }
               },
               title: S.of(context).login,
             ),

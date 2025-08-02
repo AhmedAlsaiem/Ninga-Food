@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/transitions/page_route_builder_method.dart';
+import 'package:ninga/features/Home/presentation/views/home_view.dart';
+import 'package:ninga/features/Home/presentation/views/main_view.dart';
 import 'package:ninga/features/authentication/presentation/view/add_profile_image_view.dart';
 import 'package:ninga/features/authentication/presentation/view/complate_profile_payment_methods.dart';
 import 'package:ninga/features/authentication/presentation/view/forget_password_view.dart';
@@ -9,7 +11,10 @@ import 'package:ninga/features/authentication/presentation/view/sign_up_complate
 import 'package:ninga/features/authentication/presentation/view/sign_up_view.dart';
 import 'package:ninga/features/authentication/presentation/view/foget_password_verification.dart';
 import 'package:ninga/features/authentication/presentation/view/sucess_resest_password_view.dart';
+import 'package:ninga/features/chat/presentation/views/chat_view.dart';
 import 'package:ninga/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:ninga/features/profile/presentation/views/profile_view.dart';
+import 'package:ninga/features/shopping/presentation/views/shopping_view.dart';
 
 class AppRouter {
   static Route? generateRoute(RouteSettings settings) {
@@ -81,12 +86,43 @@ class AppRouter {
           pageBuilder:
               (context, animation, secondaryAnimation) =>
                   const ComplateProfilePaymentMethods(),
-        );case AppRoutes.addProfileImageView:
+        );
+      case AppRoutes.addProfileImageView:
         return pageRouteBuilderMethod(
           settings: settings,
           pageBuilder:
               (context, animation, secondaryAnimation) =>
                   const AddProfileImageView(),
+        );
+      case AppRoutes.mainview:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const MainView(),
+        );
+      case AppRoutes.homeView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const HomeView(),
+        );
+      case AppRoutes.profileView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const ProfileView(),
+        );
+      case AppRoutes.shoppingView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const ShoppingView(),
+        );
+      case AppRoutes.chatView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const ChatView(),
         );
 
       default:
@@ -113,4 +149,9 @@ abstract class AppRoutes {
   static const String complateProfilePaymentsMethods =
       '/complateProfilePaymentsMethods';
   static const String addProfileImageView = '/addProfileImageView';
+  static const String mainview = '/mainview';
+  static const String homeView = '/homeView';
+  static const String profileView = '/profileView';
+  static const String shoppingView = '/shoppingView';
+  static const String chatView = '/chatView';
 }

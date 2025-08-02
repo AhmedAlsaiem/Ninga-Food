@@ -28,35 +28,29 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
+  device_preview: ^1.2.0
+  dio: ^5.8.0+1
+  equatable: ^2.0.7
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  screenutil_module: ^1.1.0
-  flutter_native_splash: ^2.4.6
   flutter_launcher_icons: ^0.14.4
   flutter_localizations:
     sdk: flutter
-  intl: 0.20.2
-  shared_preferences: ^2.5.3
-  dio: ^5.8.0+1
-  flutter_screenutil: ^5.9.3
-  device_preview: ^1.2.0
+  flutter_native_splash: ^2.4.6
   flutter_onboarding_slider: ^1.0.11
+  flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
-  equatable: ^2.0.7
-  dartz: ^0.10.1
+  intl: 0.20.2
+  persistent_bottom_nav_bar: ^6.2.1
+  screenutil_module: ^1.1.0
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   build_runner: ^2.5.4
-  hive_generator: ^2.0.1
-  path_provider: ^2.0.9
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -64,6 +58,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+  hive_generator: ^2.0.1
+  path_provider: ^2.0.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
