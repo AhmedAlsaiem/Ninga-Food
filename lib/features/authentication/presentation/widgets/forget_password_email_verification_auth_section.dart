@@ -59,7 +59,7 @@ class _ForgetPasswordEmailVerificationAuthSectionState
             CustomAuthenticationTextFromField(
               validator: validationEmailMethod(context: context),
               icon: AssetsIcon.emailIcon,
-              hintText: S.of(context).email,
+              hintText:S.of(context).email,
               onChanged: (value) {},
             ),
 

@@ -13,5 +13,6 @@ void main() async {
 
   await Hive.openBox<AppStateModels>(HiveKeys.kBoxAppStateName);
   initilazeAppSatesMethod();
+
   runApp(Ninga());
 }

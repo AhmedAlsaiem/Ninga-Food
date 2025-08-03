@@ -81,7 +81,8 @@ class AppRouter {
           pageBuilder:
               (context, animation, secondaryAnimation) =>
                   const ComplateProfilePaymentMethods(),
-        );case AppRoutes.addProfileImageView:
+        );
+      case AppRoutes.addProfileImageView:
         return pageRouteBuilderMethod(
           settings: settings,
           pageBuilder:
@@ -113,4 +114,5 @@ abstract class AppRoutes {
   static const String complateProfilePaymentsMethods =
       '/complateProfilePaymentsMethods';
   static const String addProfileImageView = '/addProfileImageView';
+  static const String test = '/tesView';
 }

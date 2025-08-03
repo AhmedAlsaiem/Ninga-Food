@@ -25,16 +25,17 @@ class Ninga extends StatelessWidget {
             builder: (context, child) {
               return AppWrapper(
                 child: MaterialApp(
-                  
-                  locale: const Locale('en'),
+                  locale: const Locale('ar'),
                   localizationsDelegates: customLocalizationDelegates,
                   supportedLocales: S.delegate.supportedLocales,
                   debugShowCheckedModeBanner: false,
                   theme: lightTheme(),
                   darkTheme: darkTheme(),
+                  //? this is the mobile code 
+
                   themeMode: ThemeMode.system,
                   onGenerateRoute: AppRouter.generateRoute,
-                  initialRoute:initalRouteMethod() ,
+                  initialRoute: initalRouteMethod(),
                 ),
               );
             },
@@ -42,3 +43,6 @@ class Ninga extends StatelessWidget {
     );
   }
 }
+// basic navigation  
+//goroute
+// Generate Route

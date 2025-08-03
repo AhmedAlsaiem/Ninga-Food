@@ -4,6 +4,7 @@ import 'package:ninga/config/routes/app_router.dart';
 import 'package:ninga/core/functions/navigation/navigation.dart';
 import 'package:ninga/core/functions/text_from_field_methods/validation_password_method.dart';
 import 'package:ninga/core/functions/text_from_field_methods/validiation_email_method.dart';
+import 'package:ninga/core/helper/extentions.dart';
 import 'package:ninga/core/utils/app_size.dart';
 import 'package:ninga/core/utils/assets_manager.dart';
 import 'package:ninga/core/widgets/custom_text_button.dart';
@@ -13,12 +14,13 @@ import 'package:ninga/generated/l10n.dart';
 import 'custom_text_button.dart';
 
 class CustomLoginViewLoginSection extends StatelessWidget {
-  CustomLoginViewLoginSection({super.key, });
+  CustomLoginViewLoginSection({super.key});
 
   final GlobalKey<FormState> loginkey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
+    context.screenHeight;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSize.s12),
       child: Form(
