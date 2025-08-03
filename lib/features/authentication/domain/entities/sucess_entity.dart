@@ -2,10 +2,10 @@ import 'package:equatable/equatable.dart';
 
 class SucessEntity extends Equatable {
   final String message;
-  final int statusCode;
+  final String status;
 
-  const SucessEntity({required this.message, required this.statusCode});
+  const SucessEntity({required this.message, required this.status});
 
   @override
-  List<Object?> get props => [message, statusCode];
+  List<Object?> get props => [message, status];
 }

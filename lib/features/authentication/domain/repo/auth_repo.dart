@@ -14,8 +14,8 @@ abstract class AuthRepo {
     required String phoneNumber,
     required String password,
   });
-  Future<Either<ErrorModel, AuthUserEntitiy>> changePassword({
-    required String passowrd,
+  Future<Either<ErrorModel, String>> changePassword({
+    required String password,
     required String newPassword,
   });
   Future<Either<ErrorModel, AuthUserEntitiy>> refreshToken({

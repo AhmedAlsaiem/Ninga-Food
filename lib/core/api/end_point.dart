@@ -84,6 +84,7 @@ class EndPoint {
 }
 
 class ApiKey {
+    static String sucess = "sucess";
   static String error = "errors";
   static String data = "data";
   static String status = "status";
