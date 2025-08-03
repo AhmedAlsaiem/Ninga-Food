@@ -19,6 +19,6 @@ ThemeData darkTheme() {
       foregroundColor: AppColors.darkPrimaryColor,
     ),
     textButtonTheme: TextButtonThemeData(style: ButtonStyle()),
-    
+  
   );
 }

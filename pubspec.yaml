@@ -50,7 +50,6 @@ dependencies:
   persistent_bottom_nav_bar: ^6.2.1
   screenutil_module: ^1.1.0
   shared_preferences: ^2.5.3
-
 dev_dependencies:
   build_runner: ^2.5.4
 
