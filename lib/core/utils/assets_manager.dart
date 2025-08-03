@@ -17,6 +17,8 @@ abstract class AssetsImage {
   static const String thankYou2 = 'assets/images/thank_you_image.svg';
   static const String thankYou1 = 'assets/images/thank_you_image2.svg';
   static const String thankYou3 = 'assets/images/thank_you_image3.svg';
+  static const String homeBackground = 'assets/images/background2.svg';
+
   static const String visa = 'assets/images/visa.svg';
   static const String authintactionBackground =
       'assets/images/background_authentication.svg';
