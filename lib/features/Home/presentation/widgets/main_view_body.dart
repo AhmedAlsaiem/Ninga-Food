@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:ninga/core/utils/app_color.dart';
 import 'package:ninga/features/Home/presentation/views/home_view.dart';
 import 'package:ninga/features/chat/presentation/views/chat_view.dart';
 import 'package:ninga/features/profile/presentation/views/profile_view.dart';
@@ -34,13 +35,52 @@ class _MainViewBodyState extends State<MainViewBody> {
     return PersistentTabView(
       decoration: NavBarDecoration(borderRadius: BorderRadius.circular(20)),
       margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
-      backgroundColor: Color(0XFF252525),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
       navBarHeight: MediaQuery.sizeOf(context).height * 0.09,
       context,
       controller: controller,
       screens: screens(),
-      items: items(),
+      items: [
+        PersistentBottomNavBarItem(
+          icon: const Icon(IconlyBold.home, color: Color(0XFF53E88B)),
+          title: ("Home"),
+          textStyle: TextStyle(fontSize: 13, fontFamily: 'BentonSans'),
+          activeColorPrimary: AppColors.mainColorStart,
+        ),
+        PersistentBottomNavBarItem(
+          icon: const Icon(IconlyBold.profile, color: Color(0XFF53E88B)),
+          title: ("Profile"),
+          textStyle: TextStyle(fontSize: 13, fontFamily: 'BentonSans'),
+          activeColorPrimary: AppColors.mainColorStart,
+        ),
+        PersistentBottomNavBarItem(
+          icon: badges.Badge(
+            badgeStyle: const badges.BadgeStyle(
+              badgeColor: Colors.red,
+              padding: EdgeInsets.all(6),
+            ),
+            position: badges.BadgePosition.topEnd(top: -4, end: -4),
+            child: const Icon(IconlyBold.buy, color: Color(0XFF53E88B)),
+          ),
+          title: ("Shop"),
+          textStyle: TextStyle(fontSize: 13, fontFamily: 'BentonSans'),
+          activeColorPrimary: AppColors.mainColorStart,
+        ),
+        PersistentBottomNavBarItem(
+          icon: badges.Badge(
+            badgeStyle: const badges.BadgeStyle(
+              badgeColor: Colors.red,
+              padding: EdgeInsets.all(6),
+            ),
+            position: badges.BadgePosition.topEnd(top: -4, end: -4),
+            child: const Icon(IconlyBold.chat, color: Color(0XFF53E88B)),
+          ),
+          title: ("Chat"),
+          textStyle: TextStyle(fontSize: 13, fontFamily: 'BentonSans'),
+          activeColorPrimary: AppColors.mainColorStart,
+        ),
+      ],
       animationSettings: const NavBarAnimationSettings(
         navBarItemAnimation: ItemAnimationSettings(
           duration: Duration(milliseconds: 500),
@@ -58,63 +98,4 @@ class _MainViewBodyState extends State<MainViewBody> {
 
 List<Widget> screens() {
   return [HomeView(), ProfileView(), ShoppingView(), ChatView()];
-}
-
-List<PersistentBottomNavBarItem> items() {
-  return [
-    PersistentBottomNavBarItem(
-      icon: const Icon(IconlyBold.home, color: Color(0XFF53E88B)),
-      title: ("Home"),
-      textStyle: TextStyle(
-        color: Color(0XFFFFFFFF),
-        fontSize: 13,
-        fontFamily: 'BentonSans',
-      ),
-      activeColorPrimary: Color(0XFFFFFFFF),
-    ),
-    PersistentBottomNavBarItem(
-      icon: const Icon(IconlyBold.profile, color: Color(0XFF53E88B)),
-      title: ("Profile"),
-      textStyle: TextStyle(
-        color: Color(0XFFFFFFFF),
-        fontSize: 13,
-        fontFamily: 'BentonSans',
-      ),
-      activeColorPrimary: Color(0XFFFFFFFF),
-    ),
-    PersistentBottomNavBarItem(
-      icon: badges.Badge(
-        badgeStyle: const badges.BadgeStyle(
-          badgeColor: Colors.red,
-          padding: EdgeInsets.all(6),
-        ),
-        position: badges.BadgePosition.topEnd(top: -4, end: -4),
-        child: const Icon(IconlyBold.buy, color: Color(0XFF53E88B)),
-      ),
-      title: ("Shop"),
-      textStyle: TextStyle(
-        color: Color(0XFFFFFFFF),
-        fontSize: 13,
-        fontFamily: 'BentonSans',
-      ),
-      activeColorPrimary: Color(0XFFFFFFFF),
-    ),
-    PersistentBottomNavBarItem(
-      icon: badges.Badge(
-        badgeStyle: const badges.BadgeStyle(
-          badgeColor: Colors.red,
-          padding: EdgeInsets.all(6),
-        ),
-        position: badges.BadgePosition.topEnd(top: -4, end: -4),
-        child: const Icon(IconlyBold.chat, color: Color(0XFF53E88B)),
-      ),
-      title: ("Chat"),
-      textStyle: TextStyle(
-        color: Color(0XFFFFFFFF),
-        fontSize: 13,
-        fontFamily: 'BentonSans',
-      ),
-      activeColorPrimary: Color(0XFFFFFFFF),
-    ),
-  ];
 }

@@ -11,7 +11,8 @@ class NearestResturantItem extends StatelessWidget {
       margin: EdgeInsets.only(left: 10),
       width: MediaQuery.sizeOf(context).width * 0.4,
       decoration: BoxDecoration(
-        color: Color(0XFF252525),
+        color: Theme.of(context).cardColor,
+        border: Border.all(color: const Color.fromARGB(31, 255, 0, 0)),
         borderRadius: BorderRadius.circular(17),
       ),
       child: Column(
@@ -31,7 +32,6 @@ class NearestResturantItem extends StatelessWidget {
             'Vegan Resto',
             maxLines: 2,
             style: TextStyle(
-              color: Color(0XFFFFFFFF),
               fontFamily: 'BentonSans Bold',
               fontWeight: FontWeight.w500,
               fontSize: 17,
@@ -44,7 +44,6 @@ class NearestResturantItem extends StatelessWidget {
               '12 Mins',
               maxLines: 2,
               style: TextStyle(
-                color: Color(0XFFFFFFFF),
                 fontFamily: 'BentonSans Bold',
                 fontWeight: FontWeight.w400,
                 fontSize: 13,

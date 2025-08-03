@@ -9,7 +9,9 @@ class PopularMenuItem extends StatelessWidget {
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 52, 53, 52),
+        color: Theme.of(context).cardColor,
+        border: Border.all(color: const Color.fromARGB(31, 255, 0, 0)),
+
         borderRadius: BorderRadius.circular(18),
       ),
       child: Row(
@@ -34,7 +36,6 @@ class PopularMenuItem extends StatelessWidget {
                 'Herbal Pancake',
                 maxLines: 2,
                 style: TextStyle(
-                  color: Color(0XFFFFFFFF),
                   fontFamily: 'BentonSans Bold',
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
@@ -47,15 +48,12 @@ class PopularMenuItem extends StatelessWidget {
                   'Warung Herbal',
                   maxLines: 2,
                   style: TextStyle(
-                    color: Color(0XFFFFFFFF),
                     fontFamily: 'BentonSans Bold',
                     fontWeight: FontWeight.w400,
                     fontSize: 13,
                   ),
                 ),
               ),
-
-              // Expanded(child: SizedBox()),
             ],
           ),
           Spacer(),

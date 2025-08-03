@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:ninga/core/utils/app_color.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:ninga/config/theme/light_theme.dart';
 import 'package:ninga/features/Home/presentation/widgets/custom_text_field.dart';
 import 'package:ninga/features/Home/presentation/widgets/nearest_resturant_item.dart';
 import 'package:ninga/features/Home/presentation/widgets/popular_menu_item.dart';
@@ -12,84 +12,89 @@ class HomeviewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.scaffoldColor,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.only(left: 12, top: 15),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: MediaQuery.sizeOf(context).width * 0.623,
-                    child: Text(
-                      'Find Your Favorite Food',
-                      maxLines: 2,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'BentonSans Bold',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 36,
-                      ),
-                    ),
-                  ),
-                  IconButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(
-                        Color.fromARGB(255, 52, 53, 52),
-                      ),
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          side: const BorderSide(width: 1.0),
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.sizeOf(context).width * 0.623,
+                      child: Text(
+                        'Find Your Favorite Food',
+                        maxLines: 2,
+                        style: TextStyle(
+                          fontFamily: 'BentonSans Bold',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 36,
                         ),
                       ),
                     ),
-                    iconSize: 29,
-                    padding: const EdgeInsets.all(10),
-                    onPressed: () {},
-                    icon: badges.Badge(
-                      badgeStyle: badges.BadgeStyle(
-                        badgeColor: Color(0XFFFF5F5F),
-                        padding: EdgeInsets.all(4),
+                    IconButton(
+                      style: ButtonStyle(
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
                       ),
-                      position: badges.BadgePosition.topEnd(top: 0.5, end: 3),
-                      child: const Icon(
-                        IconlyLight.notification,
-                        color: Color(0XFF53E88B),
+                      iconSize: 29,
+                      padding: const EdgeInsets.all(10),
+                      onPressed: () {},
+                      icon: badges.Badge(
+                        badgeStyle: badges.BadgeStyle(
+                          badgeColor: Color(0XFFFF5F5F),
+                          padding: EdgeInsets.all(4),
+                        ),
+                        position: badges.BadgePosition.topEnd(top: 0.5, end: 3),
+                        child: const Icon(
+                          IconlyLight.notification,
+                          color: Color(0XFF53E88B),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 20),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: MediaQuery.sizeOf(context).width * 0.81,
-                    child: CustomTextField(),
-                  ),
-                  IconButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(
-                        Color.fromARGB(255, 33, 32, 32),
-                      ),
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: const BorderSide(width: 1.0),
+              Padding(
+                padding: const EdgeInsets.only(right: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.sizeOf(context).width * 0.79,
+                      child: CustomTextField(),
+                    ),
+                    IconButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          Theme.of(context).inputDecorationTheme.fillColor,
+                        ),
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
                         ),
                       ),
+                      iconSize: 29,
+                      padding: const EdgeInsets.all(15),
+                      onPressed: () {},
+                      icon: Icon(
+                        IconlyBold.filter,
+                        color:
+                            Theme.of(
+                              context,
+                            ).inputDecorationTheme.prefixIconColor,
+                      ),
                     ),
-                    iconSize: 29,
-                    padding: const EdgeInsets.all(15),
-                    onPressed: () {},
-                    icon: const Icon(IconlyBold.filter, color: Colors.white),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 40),
 
@@ -106,7 +111,6 @@ class HomeviewBody extends StatelessWidget {
                             Text(
                               'Nearest Restaurant',
                               style: TextStyle(
-                                color: Colors.white,
                                 fontFamily: 'BentonSans Bold',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
@@ -150,7 +154,6 @@ class HomeviewBody extends StatelessWidget {
                             Text(
                               'Popular Menu',
                               style: TextStyle(
-                                color: Colors.white,
                                 fontFamily: 'BentonSans Bold',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,

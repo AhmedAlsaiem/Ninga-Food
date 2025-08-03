@@ -4,8 +4,14 @@ import 'package:ninga/core/utils/app_color.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
+    cardColor: Color.fromARGB(255, 255, 255, 255),
     fontFamily: 'OpenSans',
-
+    iconButtonTheme: IconButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all(Colors.white),
+        iconColor: WidgetStateProperty.all(AppColors.mainColorStart),
+      ),
+    ),
     textTheme: textTheme(color: AppColors.balck),
     brightness: Brightness.light,
     primaryColorDark: AppColors.darkPrimaryColor,
@@ -15,6 +21,15 @@ ThemeData lightTheme() {
       titleTextStyle: TextStyle(color: AppColors.darkPrimaryColor),
       backgroundColor: AppColors.lightPrimaryColor,
       foregroundColor: AppColors.lightPrimaryColor,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: Color.fromARGB(255, 226, 197, 163),
+      prefixIconColor: Color(0XFFDA6317),
+      hintStyle: TextStyle(
+        color: Color.fromARGB(255, 198, 134, 94),
+        fontSize: 14,
+        fontWeight: FontWeight.w300,
+      ),
     ),
   );
 }
