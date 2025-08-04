@@ -23,10 +23,10 @@ ThemeData lightTheme() {
       foregroundColor: AppColors.lightPrimaryColor,
     ),
     inputDecorationTheme: InputDecorationTheme(
-      fillColor: Color.fromARGB(255, 226, 197, 163),
-      prefixIconColor: Color(0XFFDA6317),
+      fillColor: Color.fromARGB(255, 226, 197, 163).withOpacity(0.19),
+      prefixIconColor: const Color(0xFFDA6317).withOpacity(0.8),
       hintStyle: TextStyle(
-        color: Color.fromARGB(255, 198, 134, 94),
+        color: Color.fromARGB(255, 198, 134, 94).withOpacity(0.8),
         fontSize: 14,
         fontWeight: FontWeight.w300,
       ),

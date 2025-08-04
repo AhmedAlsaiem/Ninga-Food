@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:badges/badges.dart' as badges;
-import 'package:ninga/config/theme/light_theme.dart';
 import 'package:ninga/features/Home/presentation/widgets/custom_text_field.dart';
 import 'package:ninga/features/Home/presentation/widgets/nearest_resturant_item.dart';
 import 'package:ninga/features/Home/presentation/widgets/popular_menu_item.dart';
