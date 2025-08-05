@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/transitions/page_route_builder_method.dart';
 import 'package:ninga/features/Home/presentation/views/home_view.dart';
 import 'package:ninga/features/Home/presentation/views/main_view.dart';
+import 'package:ninga/features/Home/presentation/views/popular_resturant_view.dart';
+import 'package:ninga/features/Home/presentation/views/poular_meau_view.dart';
+import 'package:ninga/features/Home/presentation/views/search_view.dart';
 import 'package:ninga/features/authentication/presentation/view/add_profile_image_view.dart';
 import 'package:ninga/features/authentication/presentation/view/complate_profile_payment_methods.dart';
 import 'package:ninga/features/authentication/presentation/view/forget_password_view.dart';
@@ -124,7 +127,25 @@ class AppRouter {
           pageBuilder:
               (context, animation, secondaryAnimation) => const ChatView(),
         );
-
+      case AppRoutes.popularResturantView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) =>
+                  const PopularResturantView(),
+        );
+      case AppRoutes.searchView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const SearchView(),
+        );
+          case AppRoutes.popularMenuView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) => const PopularMenuView(),
+        );
       default:
         return pageRouteBuilderMethod(
           settings: settings,
@@ -151,6 +172,9 @@ abstract class AppRoutes {
   static const String addProfileImageView = '/addProfileImageView';
   static const String mainview = '/mainview';
   static const String homeView = '/homeView';
+  static const String popularResturantView = '/popularResturantView';
+  static const String popularMenuView = '/popularMenuView';
+  static const String searchView = '/searchView';
   static const String profileView = '/profileView';
   static const String shoppingView = '/shoppingView';
   static const String chatView = '/chatView';

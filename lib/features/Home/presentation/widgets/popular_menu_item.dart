@@ -19,7 +19,6 @@ class PopularMenuItem extends StatelessWidget {
           Container(
             width: 80,
             height: 80,
-
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               image: DecorationImage(

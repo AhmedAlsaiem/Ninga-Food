@@ -12,9 +12,9 @@ import 'generated/l10n.dart';
 
 class Ninga extends StatelessWidget {
   const Ninga({super.key});
-// youssef
-// mahmoud
-// yoyssss
+  // youssef
+  // mahmoud
+  // yoyssss
   @override
   Widget build(BuildContext context) {
     return DevicePreview(
@@ -27,7 +27,6 @@ class Ninga extends StatelessWidget {
             builder: (context, child) {
               return AppWrapper(
                 child: MaterialApp(
-                  
                   locale: const Locale('en'),
                   localizationsDelegates: customLocalizationDelegates,
                   supportedLocales: S.delegate.supportedLocales,
@@ -36,7 +35,7 @@ class Ninga extends StatelessWidget {
                   darkTheme: darkTheme(),
                   themeMode: ThemeMode.system,
                   onGenerateRoute: AppRouter.generateRoute,
-                  initialRoute:initalRouteMethod() ,
+                  initialRoute: initalRouteMethod(),
                 ),
               );
             },

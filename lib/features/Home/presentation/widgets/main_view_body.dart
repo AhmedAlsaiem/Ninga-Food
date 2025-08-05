@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:ninga/core/utils/app_color.dart';
 import 'package:ninga/features/Home/presentation/views/home_view.dart';
+import 'package:ninga/features/Home/presentation/views/popular_resturant_view.dart';
+import 'package:ninga/features/Home/presentation/views/poular_meau_view.dart';
+import 'package:ninga/features/Home/presentation/views/search_view.dart';
 import 'package:ninga/features/chat/presentation/views/chat_view.dart';
 import 'package:ninga/features/profile/presentation/views/profile_view.dart';
 import 'package:ninga/features/shopping/presentation/views/shopping_view.dart';
@@ -47,6 +50,15 @@ class _MainViewBodyState extends State<MainViewBody> {
           title: ("Home"),
           textStyle: TextStyle(fontSize: 13, fontFamily: 'BentonSans'),
           activeColorPrimary: AppColors.mainColorStart,
+          routeAndNavigatorSettings: RouteAndNavigatorSettings(
+            initialRoute: "/",
+            routes: {
+              "/popularResturantView":
+                  ( context) => const PopularResturantView(),
+              '/searchView': ( context) => const SearchView(),
+               '/popularMenuView': ( context) => const PopularMenuView(),
+            },
+          ),
         ),
         PersistentBottomNavBarItem(
           icon: const Icon(IconlyBold.profile, color: Color(0XFF53E88B)),

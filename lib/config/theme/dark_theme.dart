@@ -15,13 +15,14 @@ ThemeData darkTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: Color.fromARGB(255, 49, 47, 47),
-      prefixIconColor: Color(0XFFFFFFFF),
+      prefixIconColor: Color(0XFFFFFFFF).withOpacity(0.8),
       hintStyle: TextStyle(
-        color: Color(0XFFFFFFFF),
+        color: Color(0XFFFFFFFF).withOpacity(0.2),
         fontSize: 14,
-        fontWeight: FontWeight.w300,
+        fontWeight: FontWeight.w500,
       ),
     ),
+
     fontFamily: 'OpenSans',
     textTheme: textTheme(color: AppColors.lightPrimaryColor),
     primaryColorDark: AppColors.lightPrimaryColor,
