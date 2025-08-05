@@ -6,7 +6,7 @@ class SucessModel extends SucessEntity {
   factory SucessModel.fromJson({required Map<String, dynamic> jsonData}) {
     return SucessModel(
       message: jsonData[ApiKey.message],
-      status: ApiKey.status,
+      status: jsonData[ApiKey.status],
     );
   }
 }
