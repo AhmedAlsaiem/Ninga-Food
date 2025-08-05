@@ -48,15 +48,18 @@ class PopularMenuViewBody extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: ListView.builder(
-                  padding: EdgeInsets.zero,
-                  itemCount: 15,
-                  itemBuilder: (context, index) {
-                    return PopularMenuItem();
-                  },
+                child: CustomScrollView(
+                  slivers: [
+                    SliverList.builder(
+                      itemCount: 15,
+                      itemBuilder: (context, index) {
+                        return PopularMenuItem();
+                      },
+                    ),
+                    SliverToBoxAdapter(child: SizedBox(height: 90)),
+                  ],
                 ),
               ),
-              SizedBox(height: 80),
             ],
           ),
         ),
