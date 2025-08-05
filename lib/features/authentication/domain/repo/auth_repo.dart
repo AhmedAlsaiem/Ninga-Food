@@ -35,8 +35,8 @@ abstract class AuthRepo {
   });
   Future<Either<ErrorModel, AuthUserEntitiy>> getCurrentUser();
   Future<Either<ErrorModel, AuthUserEntitiy>> updateUser({
-    final String userName,
-    final String phoneNumber,
-    final String email,
+    required String userName,
+    required String phoneNumber,
+    required String email,
   });
 }

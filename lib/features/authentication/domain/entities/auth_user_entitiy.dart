@@ -5,8 +5,8 @@ class AuthUserEntitiy extends Equatable {
   final String name;
   final String phoneNumber;
   final String token;
-  final String refreshToken;
-  final String refreshTokenExpirDate;
+  final String? refreshToken;
+  final String? refreshTokenExpirDate;
 
   const AuthUserEntitiy({
     required this.id,
