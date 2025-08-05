@@ -26,6 +26,8 @@ class AppStateModels extends HiveObject {
 
   @HiveField(7)
   bool? isConnected;
+  @HiveField(8)
+  String? refreshToken;
 
   AppStateModels({
     this.token,
@@ -36,6 +38,7 @@ class AppStateModels extends HiveObject {
     this.onboardingCompleted,
     this.isConnected,
     this.notificationsCount,
+    this.refreshToken,
   });
 }
 
@@ -48,4 +51,5 @@ AppStateModels appState = AppStateModels(
   onboardingCompleted: false,
   isConnected: true,
   notificationsCount: 0,
+  refreshToken: null,
 );

@@ -25,13 +25,14 @@ class AppStateModelsAdapter extends TypeAdapter<AppStateModels> {
       onboardingCompleted: fields[6] as bool?,
       isConnected: fields[7] as bool?,
       notificationsCount: fields[2] as int?,
+      refreshToken: fields[8] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, AppStateModels obj) {
     writer
-      ..writeByte(8)
+      ..writeByte(9)
       ..writeByte(0)
       ..write(obj.token)
       ..writeByte(1)
@@ -47,7 +48,9 @@ class AppStateModelsAdapter extends TypeAdapter<AppStateModels> {
       ..writeByte(6)
       ..write(obj.onboardingCompleted)
       ..writeByte(7)
-      ..write(obj.isConnected);
+      ..write(obj.isConnected)
+      ..writeByte(8)
+      ..write(obj.refreshToken);
   }
 
   @override

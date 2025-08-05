@@ -27,7 +27,7 @@ abstract class BaseAuthRemoteDatasource {
     required String email,
     required String newPassword,
   });
-  Future<UserAuthModel> confirmeEmailByEmailCode({
+  Future<SucessModel> confirmeEmailByEmailCode({
     required String email,
     required String confirmationCode,
   });
@@ -62,18 +62,35 @@ class AuthRemoteDatasource extends BaseAuthRemoteDatasource {
   }
 
   @override
-  Future<UserAuthModel> confirmeEmailByEmailCode({
+  Future<SucessModel> confirmeEmailByEmailCode({
     required String email,
     required String confirmationCode,
-  }) {
-    // TODO: implement confirmeEmailByEmailCode
-    throw UnimplementedError();
+  }) async {
+    try {
+      dynamic response = await api.post(
+        EndPoint.confirmEmail,
+        data: {ApiKey.email: email, ApiKey.confimationCode: confirmationCode},
+      );
+      SucessModel sucessModel = SucessModel.fromJson(response);
+      return sucessModel;
+    } on ServerException catch (e) {
+      throw ServerException(errModel: e.errModel);
+    } on Exception catch (e) {
+      throw Exception(e.toString());
+    }
   }
 
   @override
-  Future<UserAuthModel> getCurrentUser() {
-    // TODO: implement getCurrentUser
-    throw UnimplementedError();
+  Future<UserAuthModel> getCurrentUser() async {
+    try {
+      dynamic response = await api.post(EndPoint.getCurrentUser);
+      UserAuthModel userData = UserAuthModel.fromJson(jsonData: response);
+      return userData;
+    } on ServerException catch (e) {
+      throw ServerException(errModel: e.errModel);
+    } on Exception catch (e) {
+      throw Exception(e.toString());
+    }
   }
 
   @override
@@ -108,15 +125,34 @@ class AuthRemoteDatasource extends BaseAuthRemoteDatasource {
   Future<UserAuthModel> resetPassword({
     required String email,
     required String newPassword,
-  }) {
-    // TODO: implement resetPassword
-    throw UnimplementedError();
+  }) async {
+    try {
+      dynamic response = await api.post(
+        EndPoint.resetPassword,
+        data: {ApiKey.email: email, ApiKey.newPassword: newPassword},
+      );
+      UserAuthModel userData = UserAuthModel.fromJson(jsonData: response);
+      return userData;
+    } on ServerException catch (e) {
+      throw ServerException(errModel: e.errModel);
+    } on Exception catch (e) {
+      throw Exception(e.toString());
+    }
   }
 
   @override
-  Future<SucessModel> sentCodeToVerifiyAcount({required String email}) {
-    // TODO: implement sentCodeToVerifiyAcount
-    throw UnimplementedError();
+  Future<SucessModel> sentCodeToVerifiyAcount({required String email}) async {
+    try {
+      dynamic response = await api.post(
+        EndPoint.sendCodeByEmail,
+        data: {ApiKey.email: email},
+      );
+      return SucessModel.fromJson(response);
+    } on ServerException catch (e) {
+      throw ServerException(errModel: e.errModel);
+    } on Exception catch (e) {
+      throw Exception(e.toString());
+    }
   }
 
   @override

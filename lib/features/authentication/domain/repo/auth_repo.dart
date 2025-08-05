@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:ninga/core/error/error_model.dart';
+import 'package:ninga/core/sucess/sucess_model.dart';
 import 'package:ninga/features/authentication/domain/entities/auth_user_entitiy.dart';
 import 'package:ninga/features/authentication/domain/entities/sucess_entity.dart';
 
@@ -26,7 +27,7 @@ abstract class AuthRepo {
     required String email,
     required String newPassword,
   });
-  Future<Either<ErrorModel, AuthUserEntitiy>> confirmeEmailByEmailCode({
+  Future<Either<ErrorModel, SucessModel>> confirmeEmailByEmailCode({
     required String email,
     required String confirmationCode,
   });

@@ -1,12 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:ninga/core/error/error_model.dart';
-import 'package:ninga/features/authentication/domain/entities/auth_user_entitiy.dart';
+import 'package:ninga/core/sucess/sucess_model.dart';
 import 'package:ninga/features/authentication/domain/repo/auth_repo.dart';
 
 class ConfirmEmailByEmailCodeUsecase {
   AuthRepo authRepo;
   ConfirmEmailByEmailCodeUsecase({required this.authRepo});
-  Future<Either<ErrorModel, AuthUserEntitiy>> excute({
+  Future<Either<ErrorModel, SucessModel>> excute({
     required String email,
     required String confirmationCode,
   }) {
