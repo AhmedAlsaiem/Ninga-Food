@@ -56,5 +56,4 @@ class ApiInterceptor extends Interceptor {
 
     return handler.reject(err);
   }
-
 }
