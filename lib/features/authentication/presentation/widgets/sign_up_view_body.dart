@@ -19,7 +19,7 @@ class SignUpViewBody extends StatelessWidget {
           ),
         ),
         child: SingleChildScrollView(
-          reverse: true,
+          reverse: false,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [

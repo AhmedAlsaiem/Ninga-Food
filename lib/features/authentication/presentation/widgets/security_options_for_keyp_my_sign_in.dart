@@ -40,10 +40,10 @@ class _SecurityOptionsForKeypMySignInState
             ),
           ),
         ),
-        SizedBox(width: AppSize.s12),
+        SizedBox(width: AppSize.s0),
         Text(
           widget.title,
-          style: AppTextStyles.textStyleRegular12.copyWith(
+          style: AppTextStyles.textStyleMedium12.copyWith(
             color: Theme.of(context).primaryColorDark.withValues(alpha: 0.6),
           ),
         ),

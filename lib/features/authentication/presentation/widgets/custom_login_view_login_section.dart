@@ -61,7 +61,7 @@ class CustomLoginViewLoginSection extends StatelessWidget {
             ),
 
             SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-            SizedBox(height: AppSize.s50.h),
+            SizedBox(height: AppSize.s20.h),
           ],
         ),
       ),
