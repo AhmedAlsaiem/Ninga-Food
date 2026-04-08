@@ -126,5 +126,10 @@
   "rainbowSandwich": "Rainbow Sandwich",
   "sugarless": "Sugarless",
   "ratingAndOrders": "4,8 Rating 2000+ Order",
-  "addToCart": "Add To Chart"
+  "addToCart": "Add To Chart",
+  "setYourCurrentLocation": "Set Your Location",
+  "setYourCurrentLocationSubTitle": "This data will be displayed in your account profile for security",
+  "yourAcountIsCreated": "Your Acount is Created"
+
+
 }

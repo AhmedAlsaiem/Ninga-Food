@@ -122,5 +122,10 @@
   "rainbowSandwich": "ساندويتش قوس قزح",
   "sugarless": "بدون سكر",
   "ratingAndOrders": "4.8 تقييم 2000+ طلب",
-  "addToCart": "أضف إلى السلة"
+  "addToCart": "أضف إلى السلة",
+  "setYourCurrentLocation": "اضف موقعك الخالى",
+  "setYourCurrentLocationSubTitle": "هذه البيانات سوف يتم عرضها فى ملفك الشخصى",
+  "yourAcountIsCreated": "تم انشاء حسابك"
+
+  
 }

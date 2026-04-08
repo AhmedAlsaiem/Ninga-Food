@@ -1,5 +1,6 @@
 
 
+import 'package:flutter/material.dart';
 import 'package:ninga/core/api/end_point.dart';
 
 class ErrorModel {
@@ -20,5 +21,13 @@ class ErrorModel {
           ? (List<String>.from(jsonData[ApiKey.error])).toString()
           : null,
     );
+  }
+}
+class Ahmed extends StatelessWidget {
+  const Ahmed({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

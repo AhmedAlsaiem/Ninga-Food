@@ -43,7 +43,7 @@ class TakePhotoOptionSection extends StatelessWidget {
             onPressed: () {
               AppNavigation.pushWithReplacement(
                 context: context,
-                route: AppRoutes.loginView,
+                route: AppRoutes.addUserLocationView,
               );
             },
             title: S.of(context).next,

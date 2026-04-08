@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ninga/core/functions/transitions/page_route_builder_method.dart';
 import 'package:ninga/features/authentication/presentation/view/add_profile_image_view.dart';
+import 'package:ninga/features/authentication/presentation/view/add_user_location_view.dart';
 import 'package:ninga/features/authentication/presentation/view/complate_profile_payment_methods.dart';
 import 'package:ninga/features/authentication/presentation/view/forget_password_view.dart';
 import 'package:ninga/features/authentication/presentation/view/login_view.dart';
@@ -89,7 +90,13 @@ class AppRouter {
               (context, animation, secondaryAnimation) =>
                   const AddProfileImageView(),
         );
-
+      case AppRoutes.addUserLocationView:
+        return pageRouteBuilderMethod(
+          settings: settings,
+          pageBuilder:
+              (context, animation, secondaryAnimation) =>
+                  const AddUserLocationView(),
+        );
       default:
         return pageRouteBuilderMethod(
           settings: settings,
@@ -115,4 +122,5 @@ abstract class AppRoutes {
       '/complateProfilePaymentsMethods';
   static const String addProfileImageView = '/addProfileImageView';
   static const String test = '/tesView';
+  static const String addUserLocationView = '/addUserLocationView';
 }

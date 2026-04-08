@@ -31,8 +31,8 @@ class Ninga extends StatelessWidget {
                   debugShowCheckedModeBanner: false,
                   theme: lightTheme(),
                   darkTheme: darkTheme(),
-                  //? this is the mobile code 
 
+                  //? this is the mobile code
                   themeMode: ThemeMode.system,
                   onGenerateRoute: AppRouter.generateRoute,
                   initialRoute: initalRouteMethod(),

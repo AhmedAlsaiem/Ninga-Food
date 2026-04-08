@@ -204,6 +204,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select which contact details should we use to reset your password",
     ),
     "setLocation": MessageLookupByLibrary.simpleMessage("Set Location"),
+    "setYourCurrentLocation": MessageLookupByLibrary.simpleMessage(
+      "Set Your Location",
+    ),
+    "setYourCurrentLocationSubTitle": MessageLookupByLibrary.simpleMessage(
+      "This data will be displayed in your account profile for security",
+    ),
     "setYourLocation": MessageLookupByLibrary.simpleMessage(
       "Set Your Location",
     ),
@@ -251,6 +257,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "youHave3Voucher": MessageLookupByLibrary.simpleMessage(
       "You Have 3 Voucher",
+    ),
+    "yourAcountIsCreated": MessageLookupByLibrary.simpleMessage(
+      "Your Acount is Created",
     ),
     "yourLocation": MessageLookupByLibrary.simpleMessage("Your Location"),
     "yourProfileIsReadyToUse": MessageLookupByLibrary.simpleMessage(

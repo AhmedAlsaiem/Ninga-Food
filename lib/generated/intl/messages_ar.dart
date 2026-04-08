@@ -191,6 +191,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "حدد معلومات الاتصال التي يجب استخدامها لإعادة تعيين كلمة المرور",
     ),
     "setLocation": MessageLookupByLibrary.simpleMessage("تحديد الموقع"),
+    "setYourCurrentLocation": MessageLookupByLibrary.simpleMessage(
+      "اضف موقعك الخالى",
+    ),
+    "setYourCurrentLocationSubTitle": MessageLookupByLibrary.simpleMessage(
+      "هذه البيانات سوف يتم عرضها فى ملفك الشخصى",
+    ),
     "setYourLocation": MessageLookupByLibrary.simpleMessage("حدد موقعك"),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "signUpForFree": MessageLookupByLibrary.simpleMessage("اشترك مجانًا"),
@@ -235,6 +241,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "waroenkKita": MessageLookupByLibrary.simpleMessage("مطعم واروينك"),
     "wijieBarAndResto": MessageLookupByLibrary.simpleMessage("مطعم وبار ويجي"),
     "youHave3Voucher": MessageLookupByLibrary.simpleMessage("لديك 3 قسائم"),
+    "yourAcountIsCreated": MessageLookupByLibrary.simpleMessage(
+      "تم انشاء حسابك",
+    ),
     "yourLocation": MessageLookupByLibrary.simpleMessage("موقعك"),
     "yourProfileIsReadyToUse": MessageLookupByLibrary.simpleMessage(
       "حسابك جاهز الآن",

@@ -1113,6 +1113,36 @@ class S {
   String get addToCart {
     return Intl.message('Add To Chart', name: 'addToCart', desc: '', args: []);
   }
+
+  /// `Set Your Location`
+  String get setYourCurrentLocation {
+    return Intl.message(
+      'Set Your Location',
+      name: 'setYourCurrentLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This data will be displayed in your account profile for security`
+  String get setYourCurrentLocationSubTitle {
+    return Intl.message(
+      'This data will be displayed in your account profile for security',
+      name: 'setYourCurrentLocationSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Acount is Created`
+  String get yourAcountIsCreated {
+    return Intl.message(
+      'Your Acount is Created',
+      name: 'yourAcountIsCreated',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
