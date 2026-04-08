@@ -29,7 +29,7 @@ class AuthRepoImplementation extends AuthRepo {
     // TODO: implement getCurrentUser
     throw UnimplementedError();
   }
-
+//? the king
   @override
   Future<Either<ErrorModel, AuthUserEntitiy>> login({
     required String phoneNumber,
@@ -88,7 +88,7 @@ class AuthRepoImplementation extends AuthRepo {
 }
 
 /**
- * Ahmed Reizk Alsaiem
+ * Ahmed Rizk Alsaiem
  * 
  * 
  * 
